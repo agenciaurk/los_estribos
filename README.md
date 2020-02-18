@@ -1,2 +1,2 @@
-# los_estribos
-Los estribos webpage repo
+Los Estribos
+Repo en desarrollo 
