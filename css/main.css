@@ -27,7 +27,7 @@ html{
 .main {
     min-height: 100vh;
     width: 100%;
-    background-image: url("/images/dummy.png");
+    background-image: url("images/dummy.png");
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
