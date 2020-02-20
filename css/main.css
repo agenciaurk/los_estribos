@@ -1,13 +1,44 @@
-* {
-    font-family: 'Roboto', 'sans-serif';
+@font-face {
+    font-family: 'melma_blackregular';
+    src: url('/css/fonts/melma-webfont.woff2') format('woff2'),
+         url('/css/fonts/melma-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
+@font-face {
+    font-family: 'spartan_mbbold';
+    src: url('/css/fonts/spartanmb-bold-webfont.woff2') format('woff2'),
+         url('/css/fonts/spartanmb-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'spartan_mbregular';
+    src: url('/css/fonts/spartanmb-regular-webfont.woff2') format('woff2'),
+         url('/css/fonts/spartanmb-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'melma_blackregular';
+}
+* {
+    font-family: 'spartan_mbregular';
+}
+.tomelma {font-family: 'melma_blackregular'}
+.tospartan {font-family: 'spartan_mbregular'}
 p {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     font-size: 1rem;
 }
 
 body {
-    background-color: rgb(250, 250, 255);
+    background-color: teal;
     color: #fafafa
 }
 html{
@@ -25,9 +56,8 @@ html{
 }
 
 .main {
-    min-height: 100vh;
     width: 100%;
-    background-image: url("images/dummy.png");
+    background-image: url("/images/dummy.png");
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -83,7 +113,7 @@ nav .sidenav-trigger i {
 }
 
 .sections .section {
-    min-height: 80vh;
+    min-height: 800px;
     padding-left: 60px;
     padding-right: 60px;    
 }
@@ -91,6 +121,18 @@ nav .sidenav-trigger i {
 .section.a {
     padding-left: 15%;
     padding-right: 15%;    
+}
+
+.section.b {
+    padding: 0;
+}
+.img360 {
+    height: 800px;
+    width: 100%;
+    background-image: url("/images/estribos_360.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .index {
@@ -104,58 +146,106 @@ nav .sidenav-trigger i {
 
 .frame {
     margin: 20px 0 20px 20px;
-    padding: 10px 0 10px 10px;
-    min-height: 50vh;
+    /* padding: 10px 0 10px 10px; */
+    min-height: 500px;
     position: relative;
     width: 100%;
-    border: 10px solid #fafafa;
+    border: 7px solid #fafafa;
 }
 .frame .children {
-    position: relative;
-    min-height: inherit
-}
-.frame .children::before {
-    content: "";
-    height: 90px;
-    width: 90px;
     position: absolute;
-    background-color: #37474f;
-    top: -65px;
-    left: -65px;
-    border: 10px solid #fafafa;
-    border-left: 10px solid transparent;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-radius: 60px;
-    transform: rotate(45deg);
+    min-height: inherit;
+    width: 100%;
+    padding: 10% 20%;
+    text-align: center;
 }
-.frame .children::after {
-    content: "";
-    height: 90px;
-    width: 90px;
-    position: absolute;
-    background-color: #37474f;
-    bottom: -65px;
-    left: -65px;
-    border: 10px solid #fafafa;
-    border-left: 10px solid transparent;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-radius: 50%;
-    transform: rotate(-45deg);
-    
+    .frame .children::before {
+        content: "";
+        height: 90px;
+        width: 90px;
+        position: absolute;
+        background-color: #37474f;
+        top: -52px;
+        left: -52px;
+        border: 7px solid #fafafa;
+        border-left: 7px solid transparent;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-radius: 60px;
+        transform: rotate(45deg);
+    }
+    .frame .children::after {
+        content: "";
+        height: 90px;
+        width: 90px;
+        position: absolute;
+        background-color: #37474f;
+        bottom: -38px;
+        left: -52px;
+        right: unset;
+        border: 7px solid #fafafa;
+        border-left: 7px solid transparent;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-radius: 50%;
+        transform: rotate(-45deg);
+        
+    }
+.frame .children h3, .frame .children h4{
+    margin: 0;
 }
 
-.cercade {
-    margin: 0 0 0 -20px;
-    min-height: calc(50vh + 80px);
+.swap {
+    font-size: 2rem;
+}
+
+.imgframe {
+    margin:5px 0 0 -20px;
+    min-height: calc(500px + 30px);
     position: relative;
     width: 100%;
 }
-.cercade .children {
+.imgframe .children {
     position: relative;
     min-height: inherit;
     background-size: cover;
     background-position: center;
     background-color:blue;
 }
+
+@media only screen and (max-width: 992px){ 
+    .m0 { display: none; }
+    .sections .section {
+        padding-left: 0px;
+        padding-right: 0px;    
+    }
+    .frame {
+        margin: 0 10px 0 10px;
+        width: auto
+    }
+    .frame .children {
+        min-height: inherit;
+        width: 100%;
+        padding: 5% 10% !important;
+    }
+        .frame .children::after {
+            background-color: #37474f;
+            top: -52px;
+            left: unset !important;
+            right: -52px !important;
+            transform: rotate(135deg);
+        }
+    .imgframe {
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .s0 { display: none; }
+    .frame .children {
+        min-height: inherit;
+        width: 100%;
+        padding: 10% 10% !important;
+    }
+}
+    
