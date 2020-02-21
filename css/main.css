@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'melma_blackregular';
-    src: url('/css/fonts/melma-webfont.woff2') format('woff2'),
-         url('/css/fonts/melma-webfont.woff') format('woff');
+    src: url('../css/fonts/melma-webfont.woff2') format('woff2'),
+         url('../css/fonts/melma-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'spartan_mbbold';
-    src: url('/css/fonts/spartanmb-bold-webfont.woff2') format('woff2'),
-         url('/css/fonts/spartanmb-bold-webfont.woff') format('woff');
+    src: url('../css/fonts/spartanmb-bold-webfont.woff2') format('woff2'),
+         url('../css/fonts/spartanmb-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -17,8 +17,8 @@
 
 @font-face {
     font-family: 'spartan_mbregular';
-    src: url('/css/fonts/spartanmb-regular-webfont.woff2') format('woff2'),
-         url('/css/fonts/spartanmb-regular-webfont.woff') format('woff');
+    src: url('../css/fonts/spartanmb-regular-webfont.woff2') format('woff2'),
+         url('../css/fonts/spartanmb-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -57,7 +57,7 @@ html{
 
 .main {
     width: 100%;
-    background-image: url("/images/dummy.png");
+    background-image: url("../images/dummy.png");
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -129,7 +129,7 @@ nav .sidenav-trigger i {
 .img360 {
     height: 800px;
     width: 100%;
-    background-image: url("/images/estribos_360.jpg");
+    background-image: url("../images/estribos_360.jpg");
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
