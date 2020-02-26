@@ -55,6 +55,10 @@ html{
     user-select: none;
 }
 
+.a-enter-ar-button, .a-enter-vr-button {
+    z-index: 999 !important;
+}
+
 .main {
     width: 100%;
     background-image: url("../images/dummy.png");
@@ -119,8 +123,16 @@ nav .sidenav-trigger i {
 }
 
 .section.a {
-    padding-left: 15%;
-    padding-right: 15%;    
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+    background-color: #a06732;
+    min-height: unset !important;
+    height: 600px !important;
+}
+
+.vr360 {
+    height: 600px;
+    width: 100%;
 }
 
 .section.b {
@@ -128,14 +140,11 @@ nav .sidenav-trigger i {
     min-height: unset;
     height: 600px !important;
 }
-.img360 {
-    height: 800px;
-    width: 100%;
-    /* background-image: url("../images/estribos_360.jpg");
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative; */
+
+.items {
+    margin-bottom: 50px;
+    padding-left: 15% !important;
+    padding-right: 15% !important;
 }
 
 .index {
@@ -150,14 +159,14 @@ nav .sidenav-trigger i {
 .frame {
     margin: 20px 0 20px 20px;
     /* padding: 10px 0 10px 10px; */
-    min-height: 500px;
+    height: 500px;
     position: relative;
     width: 100%;
     border: 7px solid #fafafa;
 }
 .frame .children {
     position: absolute;
-    min-height: inherit;
+    height: inherit;
     width: 100%;
     padding: 10% 20%;
     text-align: center;
@@ -183,7 +192,7 @@ nav .sidenav-trigger i {
         width: 90px;
         position: absolute;
         background-color: #37474f;
-        bottom: -52px;
+        bottom: -38px;
         left: -52px;
         right: unset;
         top: unset;
@@ -225,7 +234,8 @@ nav .sidenav-trigger i {
     }
     .frame {
         margin: 0 10px 0 10px;
-        width: auto
+        width: auto;
+        height: 450px;
     }
     .frame .children {
         min-height: inherit;
@@ -240,7 +250,13 @@ nav .sidenav-trigger i {
             transform: rotate(135deg);
         }
     .imgframe {
-        margin: 0 !important;
+        margin: -20px 0 0 0 !important;
+        height: 400px;
+    }
+
+    .vr360 {
+        height: calc(99vh - 80px);
+        width: 100%;
     }
 }
 
