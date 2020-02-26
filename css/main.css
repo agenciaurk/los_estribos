@@ -111,9 +111,9 @@ nav .sidenav-trigger i {
 }
 
 .fixed {
-    position: fixed;
-    top:0;
-    margin-bottom: 80px;
+    position: fixed !important;
+    top: 0 !important;
+    margin-bottom: 80px !important;
 }
 
 .sections .section {
@@ -126,8 +126,7 @@ nav .sidenav-trigger i {
     padding-left: 15% !important;
     padding-right: 15% !important;
     background-color: #a06732;
-    min-height: unset !important;
-    height: 600px !important;
+    min-height: 600px !important
 }
 
 .vr360 {
@@ -143,8 +142,8 @@ nav .sidenav-trigger i {
 
 .items {
     margin-bottom: 50px;
-    padding-left: 15% !important;
-    padding-right: 15% !important;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
 }
 
 .index {
