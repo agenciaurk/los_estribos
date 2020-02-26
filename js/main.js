@@ -2,7 +2,7 @@ const carruselContent = [
     {
         place: "Lorem ipsum",
         distance: "0",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, natus. Voluptates dolorum odit laudantium molestias reprehenderit doloribus architecto magnam voluptas, tenetur nesciunt maxime, ut laboriosam natus soluta dicta repellendus cum?",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Volehenderit doloribus architecto magnam voluptas, tenetur nesciunt maxime, ut laboriosam natus soluta dicta repellendus cum?",
         img: "https://cdn.idropnews.com/wp-content/uploads/2017/09/13112449/Blorange-iPhone-Wallpaper-1080x1920.jpg"
     },
     {
@@ -23,57 +23,42 @@ class Carrusel {
         this.toright = toright
         this.index = 0
         this.maxIndex = carruselContent.length - 1
+        this.timer = 3000
         this.interval = setInterval(() => {
-            if(this.index >= this.maxIndex) this.index = 0
-            else if(this.index <= 0) this.index = this.maxIndex
-            else this.index++
-            this.swap(this.index)
-        }, 3000)
+            let nextIndex = this.increase()
+            this.swap(nextIndex)
+        }, this.timer)
 
         this.toleft.addEventListener("click", () => {
             clearInterval(this.interval)
 
-            if(this.index >= this.maxIndex) this.index = 0
-            else if(this.index <= 0) this.index = this.maxIndex
-            else this.index--
-
-            this.swap(this.index)
-                this.interval = setInterval(() => {
-                if(this.index >= this.maxIndex) this.index = 0
-                else if(this.index <= 0) this.index = this.maxIndex
-                else this.index++
-
-                this.swap(this.index)
-            }, 3000)
+            let prevIndex = this.decrease()
+            this.swap(prevIndex)
+            
+            this.interval = setInterval(() => {
+                let nextIndex = this.increase()
+                this.swap(nextIndex)
+            }, this.timer)
 
         })
 
         this.toright.addEventListener("click", () => {
             clearInterval(this.interval)
 
-            if(this.index >= this.maxIndex) this.index = 0
-            else if(this.index <= 0) this.index = this.maxIndex
-            else this.index++
-
-            this.swap(this.index)
+            let nextIndex = this.increase()
+            this.swap(nextIndex)
 
             this.interval = setInterval(() => {
-                if(this.index >= this.maxIndex) this.index = 0
-                else if(this.index <= 0) this.index = this.maxIndex
-                else this.index++
-
-                this.swap(this.index)
-            }, 3000)
+                let nextIndex = this.increase()
+                this.swap(nextIndex)
+            }, this.timer)
         })
 
         this.placeimg.addEventListener("mouseover", () => clearInterval(this.interval))
         this.placeimg.addEventListener("mouseleave", () => this.interval = setInterval(() => {
-            if(this.index >= this.maxIndex) this.index = 0
-            else if(this.index <= 0) this.index = this.maxIndex
-            else this.index++
-
-            this.swap(this.index)
-        }, 3000))
+            let nextIndex = this.increase()
+            this.swap(nextIndex)
+        }, this.timer))
 
         this.swap(this.index)
     }
@@ -83,6 +68,20 @@ class Carrusel {
         this.description.innerText = carruselContent[i].description
         this.distance.innerText = carruselContent[i].distance
         this.placeimg.style.backgroundImage = `url("${carruselContent[i].img}")`
+    }
+
+    increase(){
+        if(this.index >= this.maxIndex) this.index = 0
+        else if(this.index <= 0) this.index = this.maxIndex
+        else this.index++
+        return this.index
+    }
+
+    decrease(){
+        if(this.index >= this.maxIndex) this.index = 0
+        else if(this.index <= 0) this.index = this.maxIndex
+        else this.index--
+        return this.index
     }
 }
 

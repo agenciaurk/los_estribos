@@ -125,14 +125,17 @@ nav .sidenav-trigger i {
 
 .section.b {
     padding: 0;
+    min-height: unset;
+    height: 600px !important;
 }
 .img360 {
     height: 800px;
     width: 100%;
-    background-image: url("../images/estribos_360.jpg");
+    /* background-image: url("../images/estribos_360.jpg");
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
+    position: relative; */
 }
 
 .index {
@@ -180,9 +183,10 @@ nav .sidenav-trigger i {
         width: 90px;
         position: absolute;
         background-color: #37474f;
-        bottom: -38px;
+        bottom: -52px;
         left: -52px;
         right: unset;
+        top: unset;
         border: 7px solid #fafafa;
         border-left: 7px solid transparent;
         border-top: 7px solid transparent;
@@ -206,11 +210,11 @@ nav .sidenav-trigger i {
     width: 100%;
 }
 .imgframe .children {
-    position: relative;
+    position: absolute;
     min-height: inherit;
+    width: inherit;
     background-size: cover;
     background-position: center;
-    background-color:blue;
 }
 
 @media only screen and (max-width: 992px){ 
