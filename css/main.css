@@ -39,7 +39,8 @@ p {
 
 body {
     background-color: teal;
-    color: #fafafa
+    color: #fafafa;
+    overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
