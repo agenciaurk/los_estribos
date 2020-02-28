@@ -40,7 +40,7 @@ p {
 body {
     background-color: teal;
     color: #fafafa;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 html{
     scroll-behavior: smooth;
