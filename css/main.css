@@ -46,6 +46,7 @@ html{
 }
 .noclickable {pointer-events: none;}
 .material-icons { font-family: 'Material Icons' !important; }
+input[type="text"] + label { pointer-events: none; }
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -116,6 +117,7 @@ nav .sidenav-trigger i {
     margin-bottom: 80px !important;
 }
 
+
 .sections .section {
     min-height: 800px;
     padding-left: 60px;
@@ -129,6 +131,12 @@ nav .sidenav-trigger i {
     min-height: 600px !important
 }
 
+.curly{
+    height: 50px;
+    width: 200px;
+    margin: auto;
+}
+
 .vr360 {
     height: 600px;
     width: 100%;
@@ -138,6 +146,7 @@ nav .sidenav-trigger i {
     padding: 0;
     min-height: unset;
     height: 600px !important;
+    background: #37474f !important;
 }
 
 .items {
@@ -224,6 +233,190 @@ nav .sidenav-trigger i {
     background-size: cover;
     background-position: center;
 }
+
+
+.section.d {
+    padding-top: 50px;
+}
+
+.fullframe {
+    margin: 50px 5px 50px 5px;
+    border: 7px solid #fafafa;
+    min-height: 200px;
+    position: relative;
+    text-align: center;
+}
+
+.fullframe .left-child {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+}
+.fullframe .left-child::before{
+    content: "";
+    height:90px;
+    width:90px; 
+    position: absolute; 
+    background-color: teal;
+    border: 7px solid #fafafa;
+    border-left: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-radius: 50%;
+    top: -52px;
+    left: -52px;
+    transform: rotate(45deg);
+
+}
+.fullframe .left-child::after {
+    content: "";
+    height:90px;
+    width:90px; 
+    position: absolute; 
+    background-color: teal; 
+    border: 7px solid #fafafa;
+    border-left: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-radius: 50%;
+    bottom: -52px;
+    left: -52px;
+    transform: rotate(-45deg);
+}
+
+.fullframe .right-child {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+}
+.fullframe .right-child::before{
+    content: "";
+    height:90px;
+    width:90px; 
+    position: absolute; 
+    background-color: teal;
+    border: 7px solid #fafafa;
+    border-left: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-radius: 50%;
+    top: -52px;
+    right: -52px;
+    transform: rotate(135deg);
+
+}
+.fullframe .right-child::after {
+    content: "";
+    height:90px;
+    width:90px; 
+    position: absolute; 
+    background-color: teal;
+    border: 7px solid #fafafa;
+    border-left: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-radius: 50%;
+    bottom: -52px;
+    right: -52px;
+    transform: rotate(-135deg);
+}
+
+.fullframe .content-child {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+}
+.fullframe .content-child *{
+    margin: 0;
+}
+
+/*FORM*/
+:root {
+    --formLabelFontSize: 0.8rem; /* var(--formLabelFontSize) */
+    --formLabelColor: #212121; /* var(--formLabelColor) */
+    --formBackgroundColor: #fafafa; /* var(--formBackgroundColor) */
+}
+
+form > .row {
+    margin: 10px 0 0 0 ;
+}
+
+.input-field > label {
+    font-size: var(--formLabelFontSize);
+}
+input[type="text"]:not(.browser-default), 
+input[type="email"]:not(.browser-default)  {
+    background-color: var(--formBackgroundColor) !important;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    border-bottom: 1px solid rgba(255, 250, 250, 0.5);
+    border-radius: 1px;
+    padding: 0 1rem;
+    width: calc(100% - 2rem);
+}
+
+input.valid[type="text"]:not(.browser-default), input.valid[type="email"]:not(.browser-default),
+input.valid[type="text"]:not(.browser-default).validate, input.valid[type="email"]:not(.browser-default).validate {
+    border-bottom: 1px solid var(--formLabelColor);
+    -webkit-box-shadow: 0 1px 0 0 var(--formLabelColor);
+    box-shadow: 0 1px 0 0 var(--formLabelColor);
+}
+
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type="email"]:not(.browser-default):focus:not([readonly]) + label {
+    font-size: var(--formLabelFontSize);
+    transition: all .2s;
+    top: -0rem;
+    text-shadow: 0 0 1px rgba(5, 0, 0, 0.25);
+    color: var(--formLabelColor)
+}
+
+input[type="text"]:not(.browser-default).validate + label.active,
+input[type="email"]:not(.browser-default).validate + label.active,
+textarea.materialize-textarea:not(.browser-default) + label.active{
+    font-size: var(--formLabelFontSize);
+    top: -0.5rem;
+    text-shadow: 0 0 1px rgba(5, 0, 0, 0.25);
+    color: var(--formLabelColor)
+}
+input[type="email"]:not(.browser-default).validate.invalid + label.active {
+    color: #F44336;
+    font-size: var(--formLabelFontSize);
+}
+
+input {
+    color: var(--formLabelColor);
+}
+
+label {
+    font-family: 'Lato', sans-serif;
+}
+
+.input-field.col label {
+    left: 1.25rem;
+    color: var(--formLabelColor)
+}
+
+input[type="text"]:not(.browser-default).invalid ~ .helper-text[data-error] {
+    font-size: 12px;
+    text-shadow: 0 0 1px rgba(5, 0, 0, 0.25)
+}
+
+textarea.materialize-textarea {
+    max-height: 250px;
+    min-height: 6rem;
+    overflow-y: visible !important;
+    background-color: var(--formBackgroundColor);
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    border-bottom: 1px solid rgba(255, 250, 250, 0.5);
+    border-radius: 1px;
+    padding: 0.8rem 1rem;
+    color: var(--formLabelColor)
+}
+
 
 @media only screen and (max-width: 992px){ 
     .m0 { display: none; }

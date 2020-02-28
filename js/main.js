@@ -89,6 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const $sidenavs = document.querySelectorAll('.sidenav')
     M.Sidenav.init($sidenavs)
 
+    const $selects = document.querySelectorAll('select')
+    M.FormSelect.init($selects);
+
     const $main = document.getElementById("main")
     $main.style.height = `${window.innerHeight}px`
 
