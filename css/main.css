@@ -38,7 +38,7 @@ p {
 }
 
 body {
-    background-color: teal;
+    background-color: #a06732;
     color: #fafafa;
     overflow-x: hidden !important;
 }
@@ -68,7 +68,7 @@ input[type="text"] + label { pointer-events: none; }
     background-repeat: no-repeat;
     position: relative;
     text-align: center;
-    background-size: cover;
+    /* background-size: cover; */
     background-origin: border-box;
     background-attachment: fixed;
 }
@@ -120,7 +120,7 @@ nav .sidenav-trigger i {
 
 
 .sections .section {
-    min-height: 800px;
+    /* min-height: 800px; */
     padding-left: 60px;
     padding-right: 60px;    
 }
@@ -337,8 +337,13 @@ nav .sidenav-trigger i {
 /*FORM*/
 :root {
     --formLabelFontSize: 0.8rem; /* var(--formLabelFontSize) */
-    --formLabelColor: #212121; /* var(--formLabelColor) */
+    --formLabelColor: #fafafa; /* var(--formLabelColor) */
     --formBackgroundColor: #fafafa; /* var(--formBackgroundColor) */
+}
+
+.select-wrapper input.select-dropdown, .dropdown-content li > a, .dropdown-content li > span {
+    font-size: 1rem;
+    color: #212121
 }
 
 form > .row {
@@ -347,12 +352,17 @@ form > .row {
 
 .input-field > label {
     font-size: var(--formLabelFontSize);
+    color: #212121 !important
 }
+.input-field > label.active {
+    color: #fafafa !important
+}
+
 input[type="text"]:not(.browser-default), 
 input[type="email"]:not(.browser-default)  {
     background-color: var(--formBackgroundColor) !important;
     border: 1px solid rgba(0, 0, 0, 0.075);
-    border-bottom: 1px solid rgba(255, 250, 250, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 1px;
     padding: 0 1rem;
     width: calc(100% - 2rem);
@@ -380,12 +390,17 @@ input[type="email"]:not(.browser-default).validate + label.active,
 textarea.materialize-textarea:not(.browser-default) + label.active{
     font-size: var(--formLabelFontSize);
     top: -0.5rem;
-    text-shadow: 0 0 1px rgba(5, 0, 0, 0.25);
+    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25);
     color: var(--formLabelColor)
 }
+
+input[type="text"]:not(.browser-default), input[type="email"]:not(.browser-default) {
+    color: #212121;
+}
 input[type="email"]:not(.browser-default).validate.invalid + label.active {
-    color: #F44336;
+    color: #fafafa;
     font-size: var(--formLabelFontSize);
+    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25);
 }
 
 input {
@@ -403,7 +418,10 @@ label {
 
 input[type="text"]:not(.browser-default).invalid ~ .helper-text[data-error] {
     font-size: 12px;
-    text-shadow: 0 0 1px rgba(5, 0, 0, 0.25)
+    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25);
+}
+input:not([type]).invalid ~ .helper-text::after, input:not([type]):focus.invalid ~ .helper-text::after, input[type="text"]:not(.browser-default).invalid ~ .helper-text::after, input[type="text"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="password"]:not(.browser-default).invalid ~ .helper-text::after, input[type="password"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="email"]:not(.browser-default).invalid ~ .helper-text::after, input[type="email"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="url"]:not(.browser-default).invalid ~ .helper-text::after, input[type="url"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="time"]:not(.browser-default).invalid ~ .helper-text::after, input[type="time"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="date"]:not(.browser-default).invalid ~ .helper-text::after, input[type="date"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="datetime"]:not(.browser-default).invalid ~ .helper-text::after, input[type="datetime"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="datetime-local"]:not(.browser-default).invalid ~ .helper-text::after, input[type="datetime-local"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="tel"]:not(.browser-default).invalid ~ .helper-text::after, input[type="tel"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="number"]:not(.browser-default).invalid ~ .helper-text::after, input[type="number"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="search"]:not(.browser-default).invalid ~ .helper-text::after, input[type="search"]:not(.browser-default):focus.invalid ~ .helper-text::after, textarea.materialize-textarea.invalid ~ .helper-text::after, textarea.materialize-textarea:focus.invalid ~ .helper-text::after, .select-wrapper.invalid ~ .helper-text::after {
+    color: #fafafa !important
 }
 
 textarea.materialize-textarea {

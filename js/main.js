@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const $nav = document.querySelector("nav")
     const $sections = document.querySelector(".sections")
     let mainHeight = $main.clientHeight
-    //window.addEventListener("resize", () => mainHeight = document.getElementById("main").clientHeight)
+    window.addEventListener("resize", () => mainHeight = document.getElementById("main").clientHeight)
 
     if($nav && $sections){
         if(this.scrollY >= mainHeight) {
