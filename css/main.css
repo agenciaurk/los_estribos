@@ -183,7 +183,7 @@ nav .sidenav-trigger i {
     padding: 10% 20%;
     text-align: center;
 }
-    .frame .children::before {
+    /* .frame .children::before {
         content: "";
         height: 90px;
         width: 90px;
@@ -215,7 +215,7 @@ nav .sidenav-trigger i {
         border-radius: 50%;
         transform: rotate(-45deg);
         
-    }
+    } */
 .frame .children h3, .frame .children h4{
     margin: 0;
 }
@@ -257,7 +257,7 @@ nav .sidenav-trigger i {
     width: 50%;
     left: 0;
 }
-.fullframe .left-child::before{
+/* .fullframe .left-child::before{
     content: "";
     height:90px;
     width:90px; 
@@ -325,7 +325,7 @@ nav .sidenav-trigger i {
     bottom: -52px;
     right: -52px;
     transform: rotate(-135deg);
-}
+} */
 
 .fullframe .content-child {
     position: relative;
