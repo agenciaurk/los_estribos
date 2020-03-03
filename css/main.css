@@ -111,6 +111,9 @@ nav .sidenav-trigger i {
     height: 80px !important;
     line-height: 80px !important;
 }
+.sidenav {
+    padding-top: 80px;
+}
 
 .fixed {
     position: fixed !important;
