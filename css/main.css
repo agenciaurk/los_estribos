@@ -81,7 +81,6 @@ header {
     background-position-y: top;
     position: relative;
     z-index: 1;
-    background-size: cover;
 }
 
 .big-logo, .godown {
@@ -222,6 +221,7 @@ nav.fixed {
 .vr360 {
     height: 600px;
     width: 100%;
+    max-height: calc(100vh - 160px);
 }
 
 /* VENTAJAS */
