@@ -44,7 +44,7 @@ h6 { font-size: 1.5rem; margin: 1rem 0 0.5rem 0 }
 body {
     color: #fafafa;
     overflow-x: hidden !important;
-    background-color: red;
+    background-color: gray;
 }
 html{ scroll-behavior: smooth; }
 
@@ -81,6 +81,7 @@ header {
     background-position-y: top;
     position: relative;
     z-index: 1;
+    background-size: cover;
 }
 
 .big-logo, .godown {
@@ -92,6 +93,7 @@ header {
     max-width: 30vw;
     height: auto;
     transition: max-width 0.1s;
+    pointer-events: none;
 }
 .big-logo { 
     top: 50%;

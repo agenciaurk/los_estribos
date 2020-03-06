@@ -256,7 +256,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const $nav = document.querySelector("nav")
     let headerHeight = $header.clientHeight
-    window.addEventListener("resize", () => headerHeight =  document.querySelector("header").clientHeight)
+    window.addEventListener("resize", () => {
+        document.querySelector("header").style.height = window.innerHeight
+        headerHeight =  document.querySelector("header").clientHeight
+    })
 
     if($nav && $page){
         if(this.scrollY >= headerHeight) {
