@@ -1,5 +1,12 @@
 const closeSidenav = new Event("closeSidenav")
 
+/** @typedef {{place:string, distance:string, description:string}} place */
+
+/** @type {place[]} */
+const places = [
+
+]
+
 class Overlay {
     constructor(options){
         if(!options) options = {}
@@ -135,109 +142,53 @@ class SideNav {
     }
 }
 
-class Gallery {
-    constructor (gallery, galleryItems, featured, leftBtn, rightBtn, images){
-        console.info("Gallery Class based on https://codepen.io/phileflanagan/pen/QgPdwz - by Phil Flanagan")
-        this.gallery = gallery
-        this.galleryItems = galleryItems
-        this.featured = featured
-        this.leftBtn = leftBtn
-        this.rightBtn = rightBtn
-
-        this.numOfItems = this.gallery.length
-        this.itemWidth = 23 // <-
-
-        this.scrollRate = 0.2 // <-
-        this.left = 0
-
-        this.leftInterval = null
-        this.rightInterval = null
-
-        this.leftBtn.addEventListener('mouseenter', () => this.moveLeft());
-        this.leftBtn.addEventListener('mouseleave', () => this.stopMovement());
-        this.rightBtn.addEventListener('mouseenter', () => this.moveRight());
-        this.rightBtn.addEventListener('mouseleave', () => this.stopMovement());
-
-        this.featured.style.backgroundImage = 'url(' + images[0] + ')';
-        for (var i = 0; i < this.galleryItems.length; i++) {
-            this.galleryItems[i].style.backgroundImage = 'url(' + images[i] + ')';
-            this.galleryItems[i].addEventListener('click', () => this.selectItem());
-        }
-    }
-
-    selectItem(e) {
-        if (e.target.classList.contains('active')) return;
-
-        featured.style.backgroundImage = e.target.style.backgroundImage;
-
-        for (var i = 0; i < this.galleryItems.length; i++) {
-            if (this.galleryItems[i].classList.contains('active'))
-                this.galleryItems[i].classList.remove('active');
-        }
-
-        e.target.classList.add('active');
-    }
-
-    galleryWrapLeft() {
-        var first = this.gallery.children[0];
-        this.gallery.removeChild(first);
-        this.gallery.style.left = -this.itemWidth + '%';
-        this.gallery.appendChild(first);
-        this.gallery.style.left = '0%';
-    }
-
-    galleryWrapRight() {
-        var last = this.gallery.children[this.gallery.children.length - 1];
-        this.gallery.removeChild(last);
-        this.gallery.insertBefore(last, this.gallery.children[0]);
-        this.gallery.style.left = '-23%';
-    }
-
-    moveLeft() {
-        this.left = this.left || 0;
-
-        this.leftInterval = setInterval(() => {
-            this.gallery.style.left = this.left + '%';
-
-            if (this.left > -this.itemWidth) {
-                this.left -= this.scrollRate;
-            } else {
-                this.left = 0;
-                this.galleryWrapLeft();
+class VentajasCarousel {
+    constructor(_element, _prev_btn, _next_btn, _place, _distance, _description, places){
+        this.element = _element
+        this.transition_time = 200
+        this.next_time = 3000
+        this.prev_btn = _prev_btn
+        this.next_btn = _next_btn
+        this.place = _place
+        this.distance = _distance
+        this.description = _description
+        this.places = places
+        this.test = 0
+        this.carousel = M.Carousel.init(this.element, {
+            fullWidth: true,
+            indicators: false,
+            duration: this.transition_time,
+            onCycleTo: () => {
+                console.log("Me moví!", this.test)
+                this.test++
             }
-        }, 1);
-    }
+        });
+        this.interval = setInterval(() => this.carousel.next(), this.next_time)
 
-    moveRight() {
-        if (this.left > -this.itemWidth && this.left < 0) {
-            this.left = this.left  - this.itemWidth;
+        this.element.addEventListener("mouseover", () => clearInterval(this.interval))
+        this.element.addEventListener("mouseleave", () => this.interval = setInterval(() => this.carousel.next(), this.next_time))
 
-            var last = this.gallery.children[this.gallery.children.length - 1];
-            this.gallery.removeChild(last);
-            this.gallery.style.left = this.left + '%';
-            this.gallery.insertBefore(last, this.gallery.children[0]);
-        }
+        this.element.addEventListener("mousedown", () => clearInterval(this.interval))
+        this.element.addEventListener("mouseup", () => this.interval = setInterval(() => this.carousel.next(), this.next_time))
 
-        this.left = this.left || 0;
+        this.prev_btn.addEventListener("mouseover", () => clearInterval(this.interval))
+        this.prev_btn.addEventListener("mouseleave", () => this.interval = setInterval(() => this.carousel.next(), this.next_time))
 
-        this.leftInterval = setInterval(() => {
-            this.gallery.style.left = this.left + '%';
+        this.next_btn.addEventListener("mouseover", () => clearInterval(this.interval))
+        this.next_btn.addEventListener("mouseleave", () => this.interval = setInterval(() => this.carousel.next(), this.next_time))
 
-            if (this.left < 0) {
-                this.left += this.scrollRate;
-            } else {
-                this.left = -this.itemWidth;
-                this.galleryWrapRight();
-            }
-        }, 1);
-    }
-
-    stopMovement() {
-        clearInterval(this.leftInterval);
-        clearInterval(this.rightInterval);
+        this.prev_btn.addEventListener("click", () => {
+            clearInterval(this.interval)
+            this.carousel.prev()
+            this.interval = setInterval(() => this.carousel.next(), this.next_time)
+        })
+        this.next_btn.addEventListener("click", () => {
+            clearInterval(this.interval)
+            this.carousel.next()
+            this.interval = setInterval(() => this.carousel.next(), this.next_time)
+        })
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const $sidenav = document.getElementById("sidenav")
@@ -252,7 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const $header = document.querySelector("header")
     const $page = document.getElementById("page")
-    // $header.style.height = `${window.innerHeight}px`
 
     const $nav = document.querySelector("nav")
     let headerHeight = $header.clientHeight
@@ -313,15 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
         $jump360.addEventListener("click", () => window.scrollTo(0, (window.scrollY + $360.getBoundingClientRect().top) - $360.clientHeight))
     }
 
-    const $gallery = document.querySelector(".gallery")
-    const $galleryItems = document.querySelectorAll(".gallery-item")
-    const $featured = document.querySelector(".featured-item")
-    const $leftBtn = document.querySelector('.move-btn.left')
-    const $rightBtn = document.querySelector('.move-btn.right')
-
-    // if($gallery && $galleryItems && $featured && $leftBtn && $rightBtn && images)
-        //var gallery = new Gallery($gallery, $galleryItems, $featured, $leftBtn, $rightBtn, images)
-
     const $fincas_car = document.getElementById("fincas-car")
 
     if($fincas_car){
@@ -334,20 +275,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         $fincas_car.addEventListener("mouseover", () => clearInterval(fincas_carousel_interval))
         $fincas_car.addEventListener("mouseleave", () => fincas_carousel_interval = setInterval(() => fincas_carousel.next(), 3000))
-        // window.addEventListener("resize", () => $fincas_car.style.height = "calc(100vh - 160px)")
+        $fincas_car.addEventListener("mousedown", () => clearInterval(fincas_carousel_interval))
+        $fincas_car.addEventListener("mouseup", () => fincas_carousel_interval = setInterval(() => fincas_carousel.next(), 3000))
     }
 
+
     const $ventajas_car = document.getElementById("ventajas-car")
-    if($ventajas_car){
-        let ventajas_carousel = M.Carousel.init($ventajas_car, {
-            fullWidth: true,
-            indicators: false
-        });
+    const $prevBtn = document.getElementById('prev_btn')
+    const $nextBtn = document.getElementById('next_btn')
+    const $place = document.getElementById("place")
+    const $distance = document.getElementById("distance")
+    const $description = document.getElementById("description")
 
-        let ventajas_carousel_interval = setInterval(() => ventajas_carousel.next(), 3000)
-
-        $ventajas_car.addEventListener("mouseover", () => clearInterval(ventajas_carousel_interval))
-        $ventajas_car.addEventListener("mouseleave", () => ventajas_carousel_interval = setInterval(() => ventajas_carousel.next(), 3000))
+    if($ventajas_car && $prevBtn && $nextBtn && $place && $distance && $description){
+        const ventajas_car = new VentajasCarousel($ventajas_car, $prevBtn, $nextBtn, $place, $distance, $description, places)
+        
     }
 
 })

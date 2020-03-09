@@ -203,13 +203,26 @@ nav.fixed {
 /* PRESENTACION */
 #presentacion {
     background-color: #a06732;
+    background-image: url('../images/wood.jpg');
     min-height: 600px;
+}
+#presentacion h2 {
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+#presentacion p {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    text-align: justify;
+    line-height: 1.7;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
 /* 360 */
 .a360 {
     position: relative;
     background-image: linear-gradient(#a06732 50%,#37474f 50%);
+    padding: 0 !important;
 }
 .jump360 {
     position: absolute;
@@ -250,9 +263,6 @@ nav.fixed {
     line-height: 1;
 }
 
-.carrusel {
-    height: 500px;
-}
 .carrusel * {
     padding: 0 !important;
     margin: 0 !important;
@@ -264,7 +274,7 @@ nav.fixed {
 
 .infobox {
     position: relative;
-    height: 100%;
+    height: 500px;
     background-color: rgba(0,0,0,0.1);
     border-radius: 3px;
     border: 1px solid rgba(255,255,255,0.025);
@@ -296,14 +306,14 @@ nav.fixed {
 
 .imgbox {
     position: relative;
-    height: 100%;
+    height: 540px;
     background-color: rgba(0,0,0,0.1);
     box-shadow: 0px 0px 3px -1px rgba(0,0,0,0.5);
     overflow: hidden;
 }
 
 .imgbox > div {
-	height: 500px !important;
+	height: 540px !important;
 }
 
 #placeimg {
@@ -313,10 +323,14 @@ nav.fixed {
 /* FINCAS */
 #fincas {
     background-color: #37474f;
-    position: relative;
+    /* position: relative; */
     /* width: 1920px;
     left: 50%;
     transform: translateX(-50%); */
+}
+
+#fincas-car {
+    box-shadow: 0 0 3px -1px rgba(0,0,0,0.9);
 }
 
 .carousel {
@@ -334,71 +348,9 @@ nav.fixed {
 	background-size: cover;
 }
 
-/* #fincas .cont {
-	margin: 0 auto;
-	width: 50%;
-	background-color: white;
+.indicator-item {
+    box-shadow: 0 0 3px -1px rgba(0,0,0,0.75);
 }
-
-.xy-center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.transition {
-	transition: all 350ms ease-in-out;
-}
-
-.r-3-2 {
-	width: 100%;
-	padding-bottom: 66.667%;
-	background-color: #ddd;
-}
-
-.image-holder {
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-}
-
-.gallery-wrapper {
-	position: relative;
-	overflow: hidden;
-}
-
-.gallery {
-	position: relative;
-	white-space: nowrap;
-	font-size: 0;
-}
-
-.item-wrapper {
-	cursor: pointer;
-	width: 23%; 
-	display: inline-block;
-	background-color: white;
-}
-
-.gallery-item { opacity: 0.5; }
-.gallery-item.active { opacity: 1; }
-
-.controls {
-	font-size: 0;
-	border-top: none;
-}
-.move-btn {
-	display: inline-block;
-	width: 50%;
-	border: none;
-  color: #ccc;
-	background-color: transparent;
-	padding: 0.2em 1.5em;
-}
-.move-btn:first-child {border-right: none;}
-.move-btn.left  { cursor: w-resize; }
-.move-btn.right { cursor: e-resize; } */
 
 /* CONTACTO */
 #contacto {
