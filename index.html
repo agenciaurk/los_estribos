@@ -26,6 +26,7 @@
         <!-- Google Fonts --> 
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
         <!-- Google Fonts -->
+        <!-- Image Map Pro --> <link rel="stylesheet" href="css/image-map-pro.min.css"> <!-- Image Map Pro -->
         <script type="text/javascript" src="js/aframe.min.js"></script>
     </head>
     <body>
@@ -539,6 +540,7 @@ xml:space="preserve">
                     <ul class="right hide-on-med-and-down">
                         <li><a href="#360" class="toUpperCase">360°</a></li>
                         <li><a href="#ventajas" class="toUpperCase">Ventajas</a></li>
+                        <li><a href="#galeria" class="toUpperCase">Galeria</a></li>
                         <li><a href="#fincas" class="toUpperCase">Fincas</a></li>
                         <li><a href="#contacto" class="toUpperCase">Contacto</a></li>
                     </ul>
@@ -547,6 +549,7 @@ xml:space="preserve">
             <ul id="sidenav">
                 <li><a href="#360" class="toUpperCase">360°</a></li>
                 <li><a href="#ventajas" class="toUpperCase">Ventajas</a></li>
+                <li><a href="#galeria" class="toUpperCase">Galeria</a></li>
                 <li><a href="#fincas" class="toUpperCase">Fincas</a></li>
                 <li><a href="#contacto" class="toUpperCase">Contacto</a></li>
             </ul>
@@ -684,7 +687,7 @@ xml:space="preserve">
                 </div>
             </div>
 
-            <div id="fincas">
+            <div id="galeria">
                 <div id="fincas-car" class="carousel carousel-slider">
                     <div class="carousel-item" style="background-image: url('images/test/1.jpg');"></div>
                     <div class="carousel-item" style="background-image: url('images/test/2.jpg');"></div>
@@ -693,22 +696,84 @@ xml:space="preserve">
                 </div>
             </div>
 
-            <div id="contacto">
-                <div class="row">
-                    <div class="col s12 m12 l6">
-
-                    </div>
-                    <div class="col s12 m12 l6">
-
-                    </div>
+            <div id="fincas" style="margin: auto;">
+                <h3 class="center">Descubri tu finca</h3>
+                <div class="refereces center">
+                    <p><span class="dotref green"></span> Disponible</p>
+                    <p><span class="dotref orange"></span> Reservado</p>
+                    <p><span class="dotref red"></span> Venido</p>
+                </div>
+                <div class="map-container">
+                    <div id="image-map-pro-container"></div>
                 </div>
             </div>
 
+            <div id="contacto">
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        PLACEHOLDER
+                    </div>
+                    <div class="col s12 m12 l6">
+                        <div style="height: 90vh" class="row ">
+                            <div class="col s0 m1 l2"></div>
+                            <form method="POST" action="" class="col s12 m10 l8 contact-form">
+
+                                <div class="row">
+                                    <div class="input-field col s12 l6">
+                                        <input required name="name" id="name" type="text" class="validate">
+                                        <label for="name">NOMBRE Y APELLIDO</label>
+                                        <span class="helper-text" data-error="Este campo es obligatorio"></span>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input required name="_replyto" id="email" type="email" class="validate">
+                                        <label for="email">TU EMAIL</label>
+                                        <span class="helper-text" data-error="El email no es válido"></span>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="input-field col s12 m12 l4">
+                                        <input required name="city" id="city" type="text" class="validate">
+                                        <label for="city">CIUDAD</label>
+                                        <span class="helper-text" data-error="Este campo es obligatorio"></span>
+                                    </div>
+                                    <div class="input-field col s12 m12 l4">
+                                        <input required name="phone" id="phone" type="text" class="validate">
+                                        <label for="phone">TELÉFONO</label>
+                                        <span class="helper-text" data-error="Este campo es obligatorio"></span>
+                                    </div>
+                                    <div class="input-field col s12 m12 l4">
+                                        <select id="lote">
+                                            <option value="" disabled selected>N° DE LOTE</option>
+                                            <option value="1">Lote 1</option>
+                                            <option value="2">Lote 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea name="message" id="content" class="materialize-textarea"></textarea>
+                                        <label for="textarea1">INFORMACION ADICIONAL (OPCIONAL)</label>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding: 0 0.75rem;">
+                                    <input type="submit" value="Enviar" class="col s12 btn" style="background-color: #424953">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div id="popup"><h1>ASD</h1></div>
         
         <script type="text/javascript" src="js/materialize.min.js"></script>
-        <!--<script type="text/javascript" src="js/jq.min.js"></script>-->
+        <script type="text/javascript" src="js/jq.min.js"></script>
+        <script type="text/javascript" src="js/image-map-pro.min.js"></script>
         <script type="text/javascript" src="js/fontawesome.min.js"></script>
+        <script type="text/javascript" src="js/map.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

@@ -1,22 +1,22 @@
 @font-face {
     font-family: 'melma_blackregular';
-    src: url('../css/fonts/melma-webfont.woff2') format('woff2'),
-         url('../css/fonts/melma-webfont.woff') format('woff');
+    src: url('../fonts/melma-webfont.woff2') format('woff2'),
+         url('../fonts/melma-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'spartan_mbbold';
-    src: url('../css/fonts/spartanmb-bold-webfont.woff2') format('woff2'),
-         url('../css/fonts/spartanmb-bold-webfont.woff') format('woff');
+    src: url('../fonts/spartanmb-bold-webfont.woff2') format('woff2'),
+         url('../fonts/spartanmb-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'spartan_mbregular';
-    src: url('../css/fonts/spartanmb-regular-webfont.woff2') format('woff2'),
-         url('../css/fonts/spartanmb-regular-webfont.woff') format('woff');
+    src: url('../fonts/spartanmb-regular-webfont.woff2') format('woff2'),
+         url('../fonts/spartanmb-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -69,6 +69,14 @@ a { text-decoration: none;}
 .right { float: right !important; }
 .center { text-align: center;}
 .toUpperCase { text-transform: uppercase; }
+
+.blr {
+    color: rgb(50,50,50);
+    border-radius: 3px;
+    box-shadow: 0 0 3px teal;
+    background-color: #ffffff
+}
+
 
 header {
     width: 100%;
@@ -221,8 +229,9 @@ nav.fixed {
 /* 360 */
 .a360 {
     position: relative;
-    background-image: linear-gradient(#a06732 50%,#37474f 50%);
-    padding: 0 !important;
+    background-color: #a06732;
+    background-image: url('../images/wood.jpg');
+    padding: 80px 0 0 0 !important;
 }
 .jump360 {
     position: absolute;
@@ -237,6 +246,7 @@ nav.fixed {
     height: 600px;
     width: 100%;
     max-height: calc(100vh - 160px);
+    box-shadow: 0 0 3px -1px rgba(0,0,0,0.75);
 }
 
 /* VENTAJAS */
@@ -256,6 +266,10 @@ nav.fixed {
 .items > div {
     width: 100%;
     margin: 15px 0
+}
+
+.items p {
+    font-size: 1.25rem;
 }
 
 .index {
@@ -297,10 +311,10 @@ nav.fixed {
 
     font-size: 30px;
 }
-#toleft {
+#prev_btn {
     justify-self: end;
 }
-#toright {
+#next_btn {
     justify-self: start;
 }
 
@@ -320,8 +334,8 @@ nav.fixed {
     height: 100%;
 }
 
-/* FINCAS */
-#fincas {
+/* FOTOGRAFIAS */
+#galeria {
     background-color: #37474f;
     /* position: relative; */
     /* width: 1920px;
@@ -352,10 +366,151 @@ nav.fixed {
     box-shadow: 0 0 3px -1px rgba(0,0,0,0.75);
 }
 
+/* FINCAS */
+#fincas {
+    background-color: #37474f;
+}
+
+.map-container {
+    min-height: calc(90vh - 80px);
+    background-color: gray;
+    box-shadow: 0 0 3px -1px rgba(0,0,0,0.5);
+}
+
+.refereces {
+    display: flex;
+    justify-content: center;
+}
+.refereces > * {
+    margin: 25px 10px 50px 10px;
+    opacity: 0.9;
+    transition: all 0.5s;
+    cursor: default;
+}
+.refereces > *:hover {
+    opacity: 1;
+    text-shadow: 0 0 3px rgba(255,255,255,0.25);
+}
+
+span.dotref {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.25);
+}
+
+.imp-wrap.imp-sticky-tooltips, .imp-shapes-menu-wrap.imp-shapes-menu-wrap-right.imp-shapes-menu-wrap-with-search-box {
+    height: calc(90vh - 80px);
+}
+
 /* CONTACTO */
 #contacto {
     position: relative;
     background-color: #37474f;
+}
+
+/*FORM*/
+:root {
+    --formLabelFontSize: 0.8rem; /* var(--formLabelFontSize) */
+    --formLabelColor: #fafafa; /* var(--formLabelColor) */
+    --formBackgroundColor: #fafafa; /* var(--formBackgroundColor) */
+}
+
+.select-wrapper input.select-dropdown, .dropdown-content li > a, .dropdown-content li > span {
+    font-size: 1rem;
+    color: #212121
+}
+
+form > .row {
+    margin: 10px 0 0 0 ;
+}
+
+.input-field > label {
+    font-size: var(--formLabelFontSize);
+    color: #212121 !important
+}
+.input-field > label.active {
+    color: #fafafa !important
+}
+
+input[type="text"]:not(.browser-default), 
+input[type="email"]:not(.browser-default)  {
+    background-color: var(--formBackgroundColor) !important;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+    padding: 0 1rem;
+    width: calc(100% - 2rem);
+}
+
+input.valid[type="text"]:not(.browser-default), input.valid[type="email"]:not(.browser-default),
+input.valid[type="text"]:not(.browser-default).validate, input.valid[type="email"]:not(.browser-default).validate {
+    border-bottom: 1px solid var(--formLabelColor);
+    -webkit-box-shadow: 0 1px 0 0 var(--formLabelColor);
+    box-shadow: 0 1px 0 0 var(--formLabelColor);
+}
+
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type="email"]:not(.browser-default):focus:not([readonly]) + label {
+    font-size: var(--formLabelFontSize);
+    transition: all .2s;
+    top: -0rem;
+    text-shadow: 0 0 1px rgba(5, 0, 0, 0.25);
+    color: var(--formLabelColor)
+}
+
+input[type="text"]:not(.browser-default).validate + label.active,
+input[type="email"]:not(.browser-default).validate + label.active,
+textarea.materialize-textarea:not(.browser-default) + label.active{
+    font-size: var(--formLabelFontSize);
+    top: -0.5rem;
+    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25);
+    color: var(--formLabelColor)
+}
+
+input[type="text"]:not(.browser-default), input[type="email"]:not(.browser-default) {
+    color: #212121;
+}
+input[type="email"]:not(.browser-default).validate.invalid + label.active {
+    color: #fafafa;
+    font-size: var(--formLabelFontSize);
+    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25);
+}
+
+input {
+    color: var(--formLabelColor);
+}
+
+label {
+    font-family: 'Lato', sans-serif;
+}
+
+.input-field.col label {
+    left: 1.25rem;
+    color: var(--formLabelColor)
+}
+
+input[type="text"]:not(.browser-default).invalid ~ .helper-text[data-error] {
+    font-size: 12px;
+    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25);
+}
+input:not([type]).invalid ~ .helper-text::after, input:not([type]):focus.invalid ~ .helper-text::after, input[type="text"]:not(.browser-default).invalid ~ .helper-text::after, input[type="text"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="password"]:not(.browser-default).invalid ~ .helper-text::after, input[type="password"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="email"]:not(.browser-default).invalid ~ .helper-text::after, input[type="email"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="url"]:not(.browser-default).invalid ~ .helper-text::after, input[type="url"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="time"]:not(.browser-default).invalid ~ .helper-text::after, input[type="time"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="date"]:not(.browser-default).invalid ~ .helper-text::after, input[type="date"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="datetime"]:not(.browser-default).invalid ~ .helper-text::after, input[type="datetime"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="datetime-local"]:not(.browser-default).invalid ~ .helper-text::after, input[type="datetime-local"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="tel"]:not(.browser-default).invalid ~ .helper-text::after, input[type="tel"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="number"]:not(.browser-default).invalid ~ .helper-text::after, input[type="number"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="search"]:not(.browser-default).invalid ~ .helper-text::after, input[type="search"]:not(.browser-default):focus.invalid ~ .helper-text::after, textarea.materialize-textarea.invalid ~ .helper-text::after, textarea.materialize-textarea:focus.invalid ~ .helper-text::after, .select-wrapper.invalid ~ .helper-text::after {
+    color: #fafafa !important
+}
+
+textarea.materialize-textarea {
+    max-height: 250px;
+    min-height: 6rem;
+    overflow-y: visible !important;
+    background-color: var(--formBackgroundColor);
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    border-bottom: 1px solid rgba(255, 250, 250, 0.5);
+    border-radius: 1px;
+    padding: 0.8rem 1rem;
+    color: #212121
 }
 
 
@@ -394,6 +549,10 @@ nav.fixed {
     }
     nav .nav-wrapper svg {
         position: relative !important;
+    }
+    .windowResponsive {
+        width: 95% !important;
+        left: calc(50% - 47.5%) !important
     }
 }
 
