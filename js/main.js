@@ -4,7 +4,86 @@ const closeSidenav = new Event("closeSidenav")
 
 /** @type {place[]} */
 const places = [
-
+    {
+        place: "Cascadas Nant y Fall",
+        distance: "4",
+        description: "cnf"
+    },
+    {
+        place: "El Molino",
+        distance: "8",
+        description: "em"
+    },
+    {
+        place: "Los Tulipanes",
+        distance: "4",
+        description: "lt"
+    },
+    {
+        place: "Frutillas orgánicas legua 13",
+        distance: "3",
+        description: "fol"
+    },
+    {
+        place: "Los viñedos Nant y Fall",
+        distance: "4",
+        description: "lvnyf"
+    },
+    {
+        place: "Paso Futaleufu Chile",
+        distance: "20",
+        description: "pfc"
+    },
+    {
+        place: "Los cipreces",
+        distance: "15",
+        description: "lc"
+    },
+    {
+        place: "Lago el baguilt",
+        distance: "30",
+        description: "leb"
+    },
+    {
+        place: "Río grande",
+        distance: "15",
+        description: "rg"
+    },
+    {
+        place: "Piscicultura",
+        distance: "15",
+        description: "psc"
+    },
+    {
+        place: "Parque Nacional Los Alerces",
+        distance: "0",
+        description: "pnla"
+    },
+    {
+        place: "Represa",
+        distance: "0",
+        description: "r"
+    },
+    {
+        place: "Trevelin colonia galesa",
+        distance: "0",
+        description: "tcg"
+    },
+    {
+        place: "Aeropuerto en Esquel",
+        distance: "0",
+        description: "aee"
+    },
+    {
+        place: "Esquel",
+        distance: "0",
+        description: "esq"
+    },
+    {
+        place: "La Hoya",
+        distance: "0",
+        description: "lh"
+    }
 ]
 
 function getScrollbarWidth(){
@@ -325,6 +404,9 @@ class SideNav {
 
 //ARREGLAR CARRUSEL
 class VentajasCarousel {
+    /**
+     * @param {place[]} places 
+     */
     constructor(_element, _prev_btn, _next_btn, _place, _distance, _description, places){
         this.element = _element
         this.transition_time = 200
@@ -335,14 +417,19 @@ class VentajasCarousel {
         this.distance = _distance
         this.description = _description
         this.places = places
-        this.test = 0
+        let placesIndex = 0
         this.carousel = M.Carousel.init(this.element, {
             fullWidth: true,
             indicators: false,
             duration: this.transition_time,
             onCycleTo: () => {
-                console.log("Me moví!", this.test)
-                this.test++
+                if(placesIndex >= places.length - 1) placesIndex = 0
+                else placesIndex++
+
+                this.place.innerText = places[placesIndex].place
+                this.distance.innerText = places[placesIndex].distance
+                this.description.innerText = places[placesIndex].description
+                
             }
         });
         this.interval = setInterval(() => this.carousel.next(), this.next_time)
@@ -358,6 +445,10 @@ class VentajasCarousel {
 
         this.prev_btn.addEventListener("click", () => this.carousel.prev())
         this.next_btn.addEventListener("click", () => this.carousel.next())
+    
+        this.place.innerText = places[placesIndex].place
+        this.distance.innerText = places[placesIndex].distance
+        this.description.innerText = places[placesIndex].description
     }
 }
 
