@@ -597,3 +597,8 @@ textarea.materialize-textarea {
 .comercializatitulo {font-size: 25px}
 .comercializadiv {text-align: center;margin-top: 50px;}
 .delamontana {width: 39%;margin-top: 30px}
+
+/* FOOTER */
+
+footer {background-color: #37474f;text-align: center;padding-top: 50px;}
+.creditos {margin-top: 80px;background-color: #151515;padding-top: 20px;padding-bottom: 20px;}
