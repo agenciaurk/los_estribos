@@ -375,6 +375,10 @@ nav.fixed {
     min-height: calc(90vh - 80px);
     background-color: gray;
     box-shadow: 0 0 3px -1px rgba(0,0,0,0.5);
+    max-width: 700px;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
 
 .refereces {
@@ -402,6 +406,7 @@ span.dotref {
 }
 
 .imp-wrap.imp-sticky-tooltips, .imp-shapes-menu-wrap.imp-shapes-menu-wrap-right.imp-shapes-menu-wrap-with-search-box {
+    height: calc(90vh - 80px);
     height: calc(90vh - 80px);
 }
 
@@ -586,3 +591,9 @@ textarea.materialize-textarea {
     }
 }
     
+
+/* COMERCIALIZA */
+
+.comercializatitulo {font-size: 25px}
+.comercializadiv {text-align: center;margin-top: 50px;}
+.delamontana {width: 39%;margin-top: 30px}
