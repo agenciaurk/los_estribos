@@ -7,82 +7,77 @@ const places = [
     {
         place: "Cascadas Nant y Fall",
         distance: "4",
-        description: "cnf"
+        description: "Área Natural Protegida Cascadas Nant y Fall cuenta con senderos interpretativos en medio de un pintoresco bosque cipreses y coihues. Desde los miradores se pueden apreciar los distintos saltos o caídas de agua en forma de cascadas."
     },
     {
-        place: "El Molino",
+        place: "Molino Harinero Nant Fach",
         distance: "8",
-        description: "em"
+        description: "El Molino Harinero Nant Fach es un sitio único que debe formar parte de cualquier itinerario en la región Su creador, Mervyn Evans, es el espejo fiel del espíritu emprendedor de los pioneros galeses que dieron vida a la producción local."
     },
     {
-        place: "Los Tulipanes",
+        place: "Campo de tulipanes",
         distance: "4",
-        description: "lt"
+        description: "Durante todo el mes de octubre los campos de tulipanes florecen y se convierten en un paisaje único, con una variada gama de colores resplandecientes que cada año atrae a vecinos y turistas que disfrutan de ese espectáculo pocas veces visto."
     },
     {
-        place: "Frutillas orgánicas legua 13",
+        place: "Frutillas orgánicas Legua 13",
         distance: "3",
-        description: "fol"
+        description: "Legua 13 es un emprendimiento familiar que combina la producción de frutas finas con el servicio turístico, para que los visitantes puedan experimentar uno de los aspectos identitarios del Valle 16 de Octubre."
     },
     {
-        place: "Los viñedos Nant y Fall",
+        place: "Viñas Nant y Fall",
         distance: "4",
-        description: "lvnyf"
+        description: "Muy cerca de las cascadas se encuentra un emprendimiento familiar que cuenta con el orgullo de ser “el viñedo más austral del mundo”, donde se producen uvas Pinot Noir, una variedad de climas fríos, muy amigable con la Patagonia."
     },
     {
-        place: "Paso Futaleufu Chile",
+        place: "Paso Futaleufu - Chile",
         distance: "20",
-        description: "pfc"
+        description: "La comuna de Futaleufú pertenece a la X° región de Chile y conserva el encanto de un pueblo sureño, con sus típicas casitas de madera y sus chimeneas humeantes."
     },
     {
-        place: "Los cipreces",
+        place: "Los Cipreses",
         distance: "15",
-        description: "lc"
+        description: "Los Cipreses es una localidad argentina del Departamento Futaleufú, en la Provincia del Chubut. Está próxima al Parque Nacional Los Alerces. Se encuentra en el km 64 de la Ruta Nacional 259."
     },
     {
         place: "Lago el baguilt",
         distance: "30",
-        description: "leb"
-    },
-    {
-        place: "Río grande",
-        distance: "15",
-        description: "rg"
+        description: "Ubicado a unos mil metros sobre el nivel del mar, a los pies del Cerro Cónico, una cumbre que al tiempo que es el límite natural entre Argentina y Chile representa un desafío para montañistas avezados. Es un sitio de gran tranquilidad, perfecto para tomar contacto con la naturaleza."
     },
     {
         place: "Piscicultura",
         distance: "15",
-        description: "psc"
+        description: "Su función es conservar la población de especies autóctonas y con los años se convirtió en un atractivo turístico. Un destino para conocer y aprender con toda la familia."
     },
     {
         place: "Parque Nacional Los Alerces",
-        distance: "0",
-        description: "pnla"
+        distance: "20",
+        description: "Los ríos y lagos que bañan el Parque se destacan por su pureza y, junto al Alerzal Milenario, son considerados paraísos que mantienen su esencia intacta, tanto que forman ya parte de la lista de sitios Patrimonio Mundial Natural de la UNESCO."
     },
     {
-        place: "Represa",
-        distance: "0",
-        description: "r"
+        place: "Represa Hidroeléctrica Futaleufú",
+        distance: "25",
+        description: "Una obra de ingeniería construida en la década del 1970 que se puede recorrer por un circuito vehicular. Uno de los puntos estratégicos es la parte superior de la Presa General San Martín desde donde se puede admirar el lago Amutuy Quimey, de aguas profundas y cristalinas."
     },
     {
-        place: "Trevelin colonia galesa",
-        distance: "0",
-        description: "tcg"
+        place: "Trevelin",
+        distance: "7",
+        description: "Trevelin es un apacible pueblo cordillerano con una marcada presencia de la cultura galesa. En el Valle 16 de Octubre se instalaron los primeros colonos que dieron origen a las ciudades de Esquel y Trevelin, quienes arribaron al valle en la expedición comandada por el Coronel Fontana en noviembre de 1885."
     },
     {
         place: "Aeropuerto en Esquel",
-        distance: "0",
-        description: "aee"
+        distance: "37",
+        description: "El Aeropuerto de Esquel Brigadier General Antonio Parodi está ahora  en plena renovación, con una imagen moderna y nuevos servicios."
     },
     {
         place: "Esquel",
-        distance: "0",
-        description: "esq"
+        distance: "27",
+        description: "Esquel es un punto estratégico en la Ruta 40, pero además es el centro de servicios por excelencia en el Oeste del Chubut y una referencia ineludible para viajeros que buscan disfrutar de las bellezas cordilleranas."
     },
     {
         place: "La Hoya",
-        distance: "0",
-        description: "lh"
+        distance: "40",
+        description: "El Centro de Actividades de Montaña La Hoya ofrece una amplia gama de servicios de alta calidad. Los trayectos de distinta dificultad que convergen en la base del cerro y la mejor nieve en polvo fuera de pista, hacen de esta montaña un espacio ideal para la familia y para el más exigente aventurero."
     }
 ]
 
@@ -417,19 +412,30 @@ class VentajasCarousel {
         this.distance = _distance
         this.description = _description
         this.places = places
-        let placesIndex = 0
+
+        this.placesIndex = 0
+        this.back = false
+        this.first = true
+
         this.carousel = M.Carousel.init(this.element, {
             fullWidth: true,
             indicators: false,
             duration: this.transition_time,
             onCycleTo: () => {
-                if(placesIndex >= places.length - 1) placesIndex = 0
-                else placesIndex++
-
-                this.place.innerText = places[placesIndex].place
-                this.distance.innerText = places[placesIndex].distance
-                this.description.innerText = places[placesIndex].description
-                
+                if(!this.first){
+                    if(!this.back){
+                        if(this.placesIndex >= places.length - 1) this.placesIndex = 0
+                        else this.placesIndex++
+                    } else {
+                        this.back = false
+                        if(this.placesIndex <= 0) this.placesIndex = places.length - 1 
+                        else this.placesIndex--
+                    }
+                    this.place.innerText = places[this.placesIndex].place
+                    this.distance.innerText = places[this.placesIndex].distance
+                    this.description.innerText = places[this.placesIndex].description
+                    console.log(this.placesIndex)
+                }
             }
         });
         this.interval = setInterval(() => this.carousel.next(), this.next_time)
@@ -443,12 +449,23 @@ class VentajasCarousel {
         this.next_btn.addEventListener("mouseover", () => clearInterval(this.interval))
         this.next_btn.addEventListener("mouseleave", () => this.interval = setInterval(() => this.carousel.next(), this.next_time))
 
-        this.prev_btn.addEventListener("click", () => this.carousel.prev())
-        this.next_btn.addEventListener("click", () => this.carousel.next())
-    
-        this.place.innerText = places[placesIndex].place
-        this.distance.innerText = places[placesIndex].distance
-        this.description.innerText = places[placesIndex].description
+        this.prev_btn.addEventListener("click", () => {
+            this.back = true
+            // this.place.innerText = places[this.placesIndex].place
+            // this.distance.innerText = places[this.placesIndex].distance
+            // this.description.innerText = places[this.placesIndex].description
+            this.carousel.prev()
+        })
+        this.next_btn.addEventListener("click", () => {
+            //this.placesIndex++
+            if(this.back) this.back = false
+            this.carousel.next()
+            
+        })
+        this.place.innerText = places[0].place
+        this.distance.innerText = places[0].distance
+        this.description.innerText = places[0].description
+        this.first = false
     }
 }
 
