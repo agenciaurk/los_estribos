@@ -434,7 +434,6 @@ class VentajasCarousel {
                     this.place.innerText = places[this.placesIndex].place
                     this.distance.innerText = places[this.placesIndex].distance
                     this.description.innerText = places[this.placesIndex].description
-                    console.log(this.placesIndex)
                 }
             }
         });
@@ -582,7 +581,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 a.hash.replace("#", "")
                 if(a.hash !== "" && a.hash.startsWith("_")) {
                     e.preventDefault()
-                    console.log(a.hash)
                     let ctop = window.pageYOffset
                     popup.show(null, {top: `calc(${ctop}px + 90px)`})
                 }
