@@ -8,90 +8,91 @@ const places = [
         place: "Cascadas Nant y Fall",
         distance: "4",
         description: "Área Natural Protegida Cascadas Nant y Fall cuenta con senderos interpretativos en medio de un pintoresco bosque cipreses y coihues. Desde los miradores se pueden apreciar los distintos saltos o caídas de agua en forma de cascadas.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/BP7gdfipVq7z1tLSA"
     },
     {
         place: "Molino Harinero Nant Fach",
         distance: "8",
         description: "El Molino Harinero Nant Fach es un sitio único que debe formar parte de cualquier itinerario en la región Su creador, Mervyn Evans, es el espejo fiel del espíritu emprendedor de los pioneros galeses que dieron vida a la producción local.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/DBYCy8u8JgJ5KP3x7"
     },
     {
         place: "Campo de tulipanes",
         distance: "4",
         description: "Durante todo el mes de octubre los campos de tulipanes florecen y se convierten en un paisaje único, con una variada gama de colores resplandecientes que cada año atrae a vecinos y turistas que disfrutan de ese espectáculo pocas veces visto.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/kejLfTPWRhgEQo5C6"
     },
     {
         place: "Frutillas orgánicas Legua 13",
         distance: "3",
         description: "Legua 13 es un emprendimiento familiar que combina la producción de frutas finas con el servicio turístico, para que los visitantes puedan experimentar uno de los aspectos identitarios del Valle 16 de Octubre.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/oeh2umViR442HdyP9"
     },
     {
         place: "Viñas Nant y Fall",
         distance: "4",
         description: "Muy cerca de las cascadas se encuentra un emprendimiento familiar que cuenta con el orgullo de ser “el viñedo más austral del mundo”, donde se producen uvas Pinot Noir, una variedad de climas fríos, muy amigable con la Patagonia.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/NVdX7azEsBfEiPxeA"
     },
     {
         place: "Paso Futaleufu - Chile",
         distance: "20",
         description: "La comuna de Futaleufú pertenece a la X° región de Chile y conserva el encanto de un pueblo sureño, con sus típicas casitas de madera y sus chimeneas humeantes.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/ziS7wxo4ohfJhhieA"
     },
     {
         place: "Los Cipreses",
         distance: "15",
         description: "Los Cipreses es una localidad argentina del Departamento Futaleufú, en la Provincia del Chubut. Está próxima al Parque Nacional Los Alerces. Se encuentra en el km 64 de la Ruta Nacional 259.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/v4fBmvfkazhn9Jjh6"
     },
     {
-        place: "Lago el baguilt",
+        place: "Lago Baguilt",
         distance: "30",
         description: "Ubicado a unos mil metros sobre el nivel del mar, a los pies del Cerro Cónico, una cumbre que al tiempo que es el límite natural entre Argentina y Chile representa un desafío para montañistas avezados. Es un sitio de gran tranquilidad, perfecto para tomar contacto con la naturaleza.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/zZjf2gZDf1kaDq7F8"
     },
     {
         place: "Piscicultura",
         distance: "15",
         description: "Su función es conservar la población de especies autóctonas y con los años se convirtió en un atractivo turístico. Un destino para conocer y aprender con toda la familia.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/jBnXfEuWgNE6JibP6"
     },
     {
         place: "Parque Nacional Los Alerces",
         distance: "20",
         description: "Los ríos y lagos que bañan el Parque se destacan por su pureza y, junto al Alerzal Milenario, son considerados paraísos que mantienen su esencia intacta, tanto que forman ya parte de la lista de sitios Patrimonio Mundial Natural de la UNESCO.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/GTgYsLXomcuraFTV8"
     },
     {
         place: "Represa Hidroeléctrica Futaleufú",
         distance: "25",
         description: "Una obra de ingeniería construida en la década del 1970 que se puede recorrer por un circuito vehicular. Uno de los puntos estratégicos es la parte superior de la Presa General San Martín desde donde se puede admirar el lago Amutuy Quimey, de aguas profundas y cristalinas.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/wjbNheWE2Y72wk4w7"
     },
     {
         place: "Trevelin",
         distance: "7",
         description: "Trevelin es un apacible pueblo cordillerano con una marcada presencia de la cultura galesa. En el Valle 16 de Octubre se instalaron los primeros colonos que dieron origen a las ciudades de Esquel y Trevelin, quienes arribaron al valle en la expedición comandada por el Coronel Fontana en noviembre de 1885.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/CtT7xRfC8U8rbJHA9"
     },
     {
         place: "Aeropuerto en Esquel",
         distance: "37",
         description: "El Aeropuerto de Esquel Brigadier General Antonio Parodi está ahora  en plena renovación, con una imagen moderna y nuevos servicios.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/vzmaAA5rHx4A2r7F6"
     },
     {
         place: "Esquel",
         distance: "27",
         description: "Esquel es un punto estratégico en la Ruta 40, pero además es el centro de servicios por excelencia en el Oeste del Chubut y una referencia ineludible para viajeros que buscan disfrutar de las bellezas cordilleranas.",
-        location: ""/*entre las comillas la url */
+        location: "https://goo.gl/maps/YkXp7jcsSc16tb448"
     },
     {
         place: "La Hoya",
         distance: "40",
-        description: "El Centro de Actividades de Montaña La Hoya ofrece una amplia gama de servicios de alta calidad. Los trayectos de distinta dificultad que convergen en la base del cerro y la mejor nieve en polvo fuera de pista, hacen de esta montaña un espacio ideal para la familia y para el más exigente aventurero."
+        description: "El Centro de Actividades de Montaña La Hoya ofrece una amplia gama de servicios de alta calidad. Los trayectos de distinta dificultad que convergen en la base del cerro y la mejor nieve en polvo fuera de pista, hacen de esta montaña un espacio ideal para la familia y para el más exigente aventurero.",
+        location: "https://goo.gl/maps/iXkrjsg5VTL3X3rRA"
     }
 ]
 
