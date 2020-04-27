@@ -305,12 +305,16 @@ nav.fixed {
     padding: 0 15% !important;
     margin-top: 2rem !important;
     transition: padding 0.05s;
+    font-size: 1.1rem
 }
 
 .controllers {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "btn btn"
+        "prev next";
     column-gap: 30px;
+    row-gap: 15px;
 
     position: absolute;
     width: 100%;
@@ -318,11 +322,34 @@ nav.fixed {
 
     font-size: 30px;
 }
+
+#location {
+    background-color: #fafafa;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    grid-area: btn;
+    width: 66%;
+    justify-self: center;
+    border: 1px solid rgba(50,50,50,0.1);
+    color: #37474f;
+    font-weight: bold;
+    transition: all ease-out 0.1s;
+}
+#location:hover {
+    background-color: rgba(0,0,0,0.1);
+    color: #fafafa;
+    border: 1px solid #fafafa
+
+
+}
+
 #prev_btn {
     justify-self: end;
+    grid-area: prev;
 }
 #next_btn {
     justify-self: start;
+    grid-area: next;
 }
 
 .imgbox {

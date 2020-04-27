@@ -1,78 +1,92 @@
 const closeSidenav = new Event("closeSidenav")
 
-/** @typedef {{place:string, distance:string, description:string}} place */
+/** @typedef {{place:string, distance:string, description:string, location:string}} place */
 
 /** @type {place[]} */
 const places = [
     {
         place: "Cascadas Nant y Fall",
         distance: "4",
-        description: "Área Natural Protegida Cascadas Nant y Fall cuenta con senderos interpretativos en medio de un pintoresco bosque cipreses y coihues. Desde los miradores se pueden apreciar los distintos saltos o caídas de agua en forma de cascadas."
+        description: "Área Natural Protegida Cascadas Nant y Fall cuenta con senderos interpretativos en medio de un pintoresco bosque cipreses y coihues. Desde los miradores se pueden apreciar los distintos saltos o caídas de agua en forma de cascadas.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Molino Harinero Nant Fach",
         distance: "8",
-        description: "El Molino Harinero Nant Fach es un sitio único que debe formar parte de cualquier itinerario en la región Su creador, Mervyn Evans, es el espejo fiel del espíritu emprendedor de los pioneros galeses que dieron vida a la producción local."
+        description: "El Molino Harinero Nant Fach es un sitio único que debe formar parte de cualquier itinerario en la región Su creador, Mervyn Evans, es el espejo fiel del espíritu emprendedor de los pioneros galeses que dieron vida a la producción local.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Campo de tulipanes",
         distance: "4",
-        description: "Durante todo el mes de octubre los campos de tulipanes florecen y se convierten en un paisaje único, con una variada gama de colores resplandecientes que cada año atrae a vecinos y turistas que disfrutan de ese espectáculo pocas veces visto."
+        description: "Durante todo el mes de octubre los campos de tulipanes florecen y se convierten en un paisaje único, con una variada gama de colores resplandecientes que cada año atrae a vecinos y turistas que disfrutan de ese espectáculo pocas veces visto.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Frutillas orgánicas Legua 13",
         distance: "3",
-        description: "Legua 13 es un emprendimiento familiar que combina la producción de frutas finas con el servicio turístico, para que los visitantes puedan experimentar uno de los aspectos identitarios del Valle 16 de Octubre."
+        description: "Legua 13 es un emprendimiento familiar que combina la producción de frutas finas con el servicio turístico, para que los visitantes puedan experimentar uno de los aspectos identitarios del Valle 16 de Octubre.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Viñas Nant y Fall",
         distance: "4",
-        description: "Muy cerca de las cascadas se encuentra un emprendimiento familiar que cuenta con el orgullo de ser “el viñedo más austral del mundo”, donde se producen uvas Pinot Noir, una variedad de climas fríos, muy amigable con la Patagonia."
+        description: "Muy cerca de las cascadas se encuentra un emprendimiento familiar que cuenta con el orgullo de ser “el viñedo más austral del mundo”, donde se producen uvas Pinot Noir, una variedad de climas fríos, muy amigable con la Patagonia.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Paso Futaleufu - Chile",
         distance: "20",
-        description: "La comuna de Futaleufú pertenece a la X° región de Chile y conserva el encanto de un pueblo sureño, con sus típicas casitas de madera y sus chimeneas humeantes."
+        description: "La comuna de Futaleufú pertenece a la X° región de Chile y conserva el encanto de un pueblo sureño, con sus típicas casitas de madera y sus chimeneas humeantes.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Los Cipreses",
         distance: "15",
-        description: "Los Cipreses es una localidad argentina del Departamento Futaleufú, en la Provincia del Chubut. Está próxima al Parque Nacional Los Alerces. Se encuentra en el km 64 de la Ruta Nacional 259."
+        description: "Los Cipreses es una localidad argentina del Departamento Futaleufú, en la Provincia del Chubut. Está próxima al Parque Nacional Los Alerces. Se encuentra en el km 64 de la Ruta Nacional 259.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Lago el baguilt",
         distance: "30",
-        description: "Ubicado a unos mil metros sobre el nivel del mar, a los pies del Cerro Cónico, una cumbre que al tiempo que es el límite natural entre Argentina y Chile representa un desafío para montañistas avezados. Es un sitio de gran tranquilidad, perfecto para tomar contacto con la naturaleza."
+        description: "Ubicado a unos mil metros sobre el nivel del mar, a los pies del Cerro Cónico, una cumbre que al tiempo que es el límite natural entre Argentina y Chile representa un desafío para montañistas avezados. Es un sitio de gran tranquilidad, perfecto para tomar contacto con la naturaleza.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Piscicultura",
         distance: "15",
-        description: "Su función es conservar la población de especies autóctonas y con los años se convirtió en un atractivo turístico. Un destino para conocer y aprender con toda la familia."
+        description: "Su función es conservar la población de especies autóctonas y con los años se convirtió en un atractivo turístico. Un destino para conocer y aprender con toda la familia.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Parque Nacional Los Alerces",
         distance: "20",
-        description: "Los ríos y lagos que bañan el Parque se destacan por su pureza y, junto al Alerzal Milenario, son considerados paraísos que mantienen su esencia intacta, tanto que forman ya parte de la lista de sitios Patrimonio Mundial Natural de la UNESCO."
+        description: "Los ríos y lagos que bañan el Parque se destacan por su pureza y, junto al Alerzal Milenario, son considerados paraísos que mantienen su esencia intacta, tanto que forman ya parte de la lista de sitios Patrimonio Mundial Natural de la UNESCO.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Represa Hidroeléctrica Futaleufú",
         distance: "25",
-        description: "Una obra de ingeniería construida en la década del 1970 que se puede recorrer por un circuito vehicular. Uno de los puntos estratégicos es la parte superior de la Presa General San Martín desde donde se puede admirar el lago Amutuy Quimey, de aguas profundas y cristalinas."
+        description: "Una obra de ingeniería construida en la década del 1970 que se puede recorrer por un circuito vehicular. Uno de los puntos estratégicos es la parte superior de la Presa General San Martín desde donde se puede admirar el lago Amutuy Quimey, de aguas profundas y cristalinas.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Trevelin",
         distance: "7",
-        description: "Trevelin es un apacible pueblo cordillerano con una marcada presencia de la cultura galesa. En el Valle 16 de Octubre se instalaron los primeros colonos que dieron origen a las ciudades de Esquel y Trevelin, quienes arribaron al valle en la expedición comandada por el Coronel Fontana en noviembre de 1885."
+        description: "Trevelin es un apacible pueblo cordillerano con una marcada presencia de la cultura galesa. En el Valle 16 de Octubre se instalaron los primeros colonos que dieron origen a las ciudades de Esquel y Trevelin, quienes arribaron al valle en la expedición comandada por el Coronel Fontana en noviembre de 1885.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Aeropuerto en Esquel",
         distance: "37",
-        description: "El Aeropuerto de Esquel Brigadier General Antonio Parodi está ahora  en plena renovación, con una imagen moderna y nuevos servicios."
+        description: "El Aeropuerto de Esquel Brigadier General Antonio Parodi está ahora  en plena renovación, con una imagen moderna y nuevos servicios.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "Esquel",
         distance: "27",
-        description: "Esquel es un punto estratégico en la Ruta 40, pero además es el centro de servicios por excelencia en el Oeste del Chubut y una referencia ineludible para viajeros que buscan disfrutar de las bellezas cordilleranas."
+        description: "Esquel es un punto estratégico en la Ruta 40, pero además es el centro de servicios por excelencia en el Oeste del Chubut y una referencia ineludible para viajeros que buscan disfrutar de las bellezas cordilleranas.",
+        location: ""/*entre las comillas la url */
     },
     {
         place: "La Hoya",
@@ -402,7 +416,7 @@ class VentajasCarousel {
     /**
      * @param {place[]} places 
      */
-    constructor(_element, _prev_btn, _next_btn, _place, _distance, _description, places){
+    constructor(_element, _prev_btn, _next_btn, _place, _distance, _description, _location, places){
         this.element = _element
         this.transition_time = 200
         this.next_time = 4000
@@ -411,6 +425,7 @@ class VentajasCarousel {
         this.place = _place
         this.distance = _distance
         this.description = _description
+        this.location = _location
         this.places = places
 
         this.placesIndex = 0
@@ -434,6 +449,7 @@ class VentajasCarousel {
                     this.place.innerText = places[this.placesIndex].place
                     this.distance.innerText = places[this.placesIndex].distance
                     this.description.innerText = places[this.placesIndex].description
+                    this.location.setAttribute("href", places[this.placesIndex].location)
                 }
             }
         });
@@ -464,6 +480,7 @@ class VentajasCarousel {
         this.place.innerText = places[0].place
         this.distance.innerText = places[0].distance
         this.description.innerText = places[0].description
+        this.location.setAttribute("href", places[0].location)
         this.first = false
     }
 }
@@ -565,9 +582,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const $place = document.getElementById("place")
     const $distance = document.getElementById("distance")
     const $description = document.getElementById("description")
+    const $location = document.getElementById("location")
 
-    if($ventajas_car && $prevBtn && $nextBtn && $place && $distance && $description){
-        const ventajas_car = new VentajasCarousel($ventajas_car, $prevBtn, $nextBtn, $place, $distance, $description, places)
+    if($ventajas_car && $prevBtn && $nextBtn && $place && $distance && $description && $location){
+        const ventajas_car = new VentajasCarousel($ventajas_car, $prevBtn, $nextBtn, $place, $distance, $description, $location,  places)
         
     }
 
