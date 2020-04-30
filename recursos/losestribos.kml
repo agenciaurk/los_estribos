@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Los Estribos Fincas del Valle</name>
+	<open>1</open>
+	<Style id="featureStyle-Color [A=255, R=255, G=255, B=255]">
+		<IconStyle>
+			<scale>0.5</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href>
+				<x>32</x>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+		<BalloonStyle>
+			<text><![CDATA[<b>$[name]</b><br/>$[description]]]></text>
+		</BalloonStyle>
+	</Style>
+	<Style id="featureStyle-Color [A=255, R=0, G=255, B=0]">
+		<IconStyle>
+			<color>ff00ff00</color>
+			<scale>0.5</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href>
+				<x>32</x>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>ff00ff00</color>
+			<scale>0.6</scale>
+		</LabelStyle>
+		<BalloonStyle>
+			<text><![CDATA[<b>$[name]</b><br/>$[description]]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ff00</color>
+		</LineStyle>
+	</Style>
+	<Style id="featureStyle-Color [White]">
+		<IconStyle>
+			<scale>0.5</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href>
+				<x>32</x>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.6</scale>
+		</LabelStyle>
+		<BalloonStyle>
+			<text><![CDATA[<b>$[name]</b><br/>$[description]]]></text>
+		</BalloonStyle>
+	</Style>
+	<Folder>
+		<name>Los Estribos Fincas del Valle</name>
+		<open>1</open>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4610185877163,-43.1513940122192,0 -71.4597716118148,-43.150862512658,0 -71.45925089207731,-43.1515408871437,0 -71.46040720281199,-43.1522290191297,0 -71.4610185877163,-43.1513940122192,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4591056763032,-43.1500838838996,0 -71.4583835120629,-43.15102468291,0 -71.45925089207731,-43.1515408871437,0 -71.4602231015806,-43.150274314194,0 -71.4598976218019,-43.150240736354,0 -71.4591056763032,-43.1500838838996,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4616867077183,-43.1504820419607,0 -71.4614828028005,-43.1504209135142,0 -71.4602231015806,-43.150274314194,0 -71.4597716118148,-43.150862512658,0 -71.461018587634,-43.1513940121816,0 -71.4616867077183,-43.1504820419607,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4626100582723,-43.1507588462122,0 -71.4616867077183,-43.1504820419607,0 -71.4610185876674,-43.1513940121968,0 -71.4619369998519,-43.151814056648,0 -71.4626100582723,-43.1507588462122,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4575366270419,-43.1497251880927,0 -71.4572610156135,-43.1499722070105,0 -71.4583835120629,-43.15102468291,0 -71.4591056763032,-43.1500838838996,0 -71.4586062303663,-43.149984960581,0 -71.4578426578791,-43.1498337196342,0 -71.4575366270419,-43.1497251880927,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4619369998519,-43.151814056648,0 -71.4626100582723,-43.1507588462122,0 -71.46286373005231,-43.1508348908089,0 -71.4633100429141,-43.150990290629,0 -71.4631448719459,-43.1522680731181,0 -71.4626784101261,-43.1521531379917,0 -71.4619369998519,-43.151814056648,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4643355265184,-43.1521645194182,0 -71.4640245351047,-43.1510520028995,0 -71.4633998598411,-43.1510215633063,0 -71.4633100429141,-43.150990290629,0 -71.4631448719459,-43.1522680731181,0 -71.4643355265184,-43.1521645194182,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4650007936087,-43.1511911160181,0 -71.4646228847887,-43.1513412343083,0 -71.4640245351047,-43.1510520028995,0 -71.4643355265184,-43.1521645194182,0 -71.4652856329609,-43.15192668287,0 -71.4660496435076,-43.1514686389263,0 -71.4650007936087,-43.1511911160181,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.46610284791269,-43.1501946792904,0 -71.4649485500514,-43.1503715811824,0 -71.4650007936087,-43.1511911160181,0 -71.4660496435076,-43.1514686389263,0 -71.46631039459921,-43.1511262179698,0 -71.46610284791269,-43.1501946792904,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4634328869931,-43.1478062320622,0 -71.4623842908204,-43.147834941133,0 -71.4621696021856,-43.1490754313046,0 -71.4631371901698,-43.1493536717034,0 -71.4634328869931,-43.1478062320622,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4631371906696,-43.1493536718471,0 -71.4621696021856,-43.1490754313046,0 -71.4619615204614,-43.1504088061616,0 -71.46294329272151,-43.1507031214729,0 -71.4631371906696,-43.1493536718471,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.46394028131439,-43.1482267077538,0 -71.4634328869931,-43.1478062320622,0 -71.4631371901698,-43.1493536717034,0 -71.46447852836231,-43.1497393703445,0 -71.4642302349844,-43.1490996738461,0 -71.46441820561211,-43.1488699227502,0 -71.46394028131439,-43.1482267077538,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.46447852836231,-43.1497393703445,0 -71.46313719016921,-43.1493536717078,0 -71.4630342893128,-43.1500698305206,0 -71.46476292991061,-43.1505486980252,0 -71.4647229978391,-43.1499222491813,0 -71.46447852836231,-43.1497393703445,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.46294329272151,-43.1507031214729,0 -71.4630342892867,-43.1500698305134,0 -71.46476292991061,-43.1505486980252,0 -71.46479855720651,-43.151107604116,0 -71.4646327921146,-43.1511734516303,0 -71.4640894988661,-43.1509108331033,0 -71.46345040711231,-43.150879691273,0 -71.46294329272151,-43.1507031214729,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4612550531413,-43.1490302555551,0 -71.4610745935978,-43.1502286131423,0 -71.46153592720251,-43.1502812184871,0 -71.4619615204614,-43.1504088061616,0 -71.4621696021856,-43.1490754313046,0 -71.4612550531413,-43.1490302555551,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.46144040458179,-43.1477993619449,0 -71.4612550531413,-43.1490302555551,0 -71.4621696021856,-43.1490754313046,0 -71.4623842908204,-43.147834941133,0 -71.46144040458179,-43.1477993619449,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.46026333728381,-43.1489425829444,0 -71.45993156508619,-43.1500982665094,0 -71.4610745935978,-43.1502286131423,0 -71.4612550531413,-43.1490302555551,0 -71.46026333728381,-43.1489425829444,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.46144040458179,-43.1477993619449,0 -71.46075009414329,-43.1477733361802,0 -71.4605933256951,-43.1477930677832,0 -71.46026333728381,-43.1489425829444,0 -71.4612550531413,-43.1490302555551,0 -71.46144040458179,-43.1477993619449,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4605933256951,-43.1477930677832,0 -71.45993156508619,-43.1500982665094,0 -71.4610745935978,-43.1502286131423,0 -71.46144040458179,-43.1477993619449,0 -71.46075009414329,-43.1477733361802,0 -71.4605933256951,-43.1477930677832,0 -71.4600400946954,-43.1478626981786,0 -71.45958452390281,-43.1480414090509,0 -71.4593323824851,-43.1480194835158,0 -71.4590315816572,-43.1488336773164,0 -71.46026333728381,-43.1489425829444,0 -71.4605933256951,-43.1477930677832,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.46026333728381,-43.1489425829444,0 -71.4590315816572,-43.1488336773164,0 -71.45865759297141,-43.1498459407861,0 -71.45993156508619,-43.1500982665094,0 -71.46026333728381,-43.1489425829444,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4590315816572,-43.1488336773164,0 -71.4576240034319,-43.1486976910946,0 -71.4571535000232,-43.1494292918747,0 -71.45791181297091,-43.1496982240976,0 -71.45865759297141,-43.1498459407861,0 -71.4590315816572,-43.1488336773164,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4593323824851,-43.1480194835158,0 -71.45870469655959,-43.1479648991673,0 -71.4581668925068,-43.1478535111152,0 -71.4576240034319,-43.1486976910946,0 -71.4590315816572,-43.1488336773164,0 -71.4593323824851,-43.1480194835158,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4573811823205,-43.1474950890236,0 -71.4573065143168,-43.1474991810797,0 -71.45648006370109,-43.1480978851392,0 -71.4569996725542,-43.1484824326123,0 -71.4576240034319,-43.1486976910946,0 -71.4581668925068,-43.1478535111152,0 -71.457978753802,-43.147814543808,0 -71.4573811823205,-43.1474950890236,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4576240034319,-43.1486976910946,0 -71.4569996725542,-43.1484824326123,0 -71.45648006370109,-43.1480978851392,0 -71.4559295126714,-43.1484967099008,0 -71.45598853666,-43.1488303457496,0 -71.4564705136806,-43.1491574610847,0 -71.4571535000232,-43.1494292918747,0 -71.4576240034319,-43.1486976910946,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4615975529844,-43.1463033965471,0 -71.46023025885459,-43.1473712534819,0 -71.46073834712691,-43.1476286857687,0 -71.4623856750033,-43.1476907859352,0 -71.4635590959486,-43.1476586585923,0 -71.4615975529844,-43.1463033965471,0 -71.4607450228888,-43.1459643350889,0 -71.4592926386089,-43.1468961793226,0 -71.46023025885459,-43.1473712534819,0 -71.4615975529844,-43.1463033965471,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4592926386089,-43.1468961793226,0 -71.45818002259,-43.1477065630957,0 -71.4587433015942,-43.1478232275607,0 -71.45954622539099,-43.1478930500587,0 -71.4599753319053,-43.1477247204128,0 -71.46073834712691,-43.1476286857687,0 -71.4592926386089,-43.1468961793226,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4607450228888,-43.1459643350889,0 -71.4597574930429,-43.1455715699984,0 -71.4584902987354,-43.1464896371993,0 -71.4592926386089,-43.1468961793226,0 -71.4607450228888,-43.1459643350889,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4621017957796,-43.1526722872873,0 -71.4615595160347,-43.1523494182933,0 -71.46061874190811,-43.1523549052121,0 -71.4601594633144,-43.1527614589984,0 -71.4612615102036,-43.1534288088307,0 -71.4621017957796,-43.1526722872873,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4626784101261,-43.1521531379917,0 -71.461018587634,-43.1513940121816,0 -71.46040720281179,-43.1522290191296,0 -71.46061874190811,-43.1523549052121,0 -71.4615595160347,-43.1523494182933,0 -71.4621017957796,-43.1526722872873,0 -71.4626784101261,-43.1521531379917,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4601594633144,-43.1527614589984,0 -71.459436339631,-43.1534015538729,0 -71.4605456380239,-43.1540732996314,0 -71.4612615102036,-43.1534288088307,0 -71.4601594633144,-43.1527614589984,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.45841754526781,-43.151979772529,0 -71.4597454732512,-43.1529019565194,0 -71.4603093812793,-43.1524027898468,0 -71.46030256302861,-43.1523523368272,0 -71.4589185770991,-43.1515287094289,0 -71.45841754526781,-43.151979772529,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4579165060556,-43.1524308333596,0 -71.4574154594623,-43.1528818919206,0 -71.4585247725875,-43.1539273358886,0 -71.45858628610711,-43.1539280247144,0 -71.4591502130308,-43.1534288639464,0 -71.4579165060556,-43.1524308333596,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.45841754526781,-43.151979772529,0 -71.4579165060556,-43.1524308333596,0 -71.4591502130308,-43.1534288639464,0 -71.4597454732512,-43.1529019565194,0 -71.45841754526781,-43.151979772529,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4595913194791,-43.1549324322345,0 -71.4586785823327,-43.1540722863186,0 -71.4585501331848,-43.1541859817171,0 -71.4584264934381,-43.1540694634348,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4597716118148,-43.150862512658,0 -71.45925089207731,-43.1515408871437,0 -71.46040720281179,-43.1522290191296,0 -71.4610185877163,-43.1513940122192,0 -71.4597716118148,-43.150862512658,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [White]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4582392578783,-43.1469465482998,0 -71.45814904366689,-43.1469841186223,0 -71.45823858676,-43.1470225401549,0 -71.4582392578783,-43.1469465482998,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=255, G=255, B=255]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.46241756560551,-43.1453093888465,0 -71.46238521276,-43.1453401101287,0 -71.4624441059018,-43.1453733640984,0 -71.4624667754084,-43.1453518378065,0 -71.46244243939501,-43.1453380965052,0 -71.4624521227238,-43.1453289015004,0 -71.46241756560551,-43.1453093888465,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=255, G=255, B=255]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4625377369953,-43.1452261925147,0 -71.46248973976979,-43.1452466874248,0 -71.4625291849181,-43.1452962177034,0 -71.4625771821695,-43.1452757227771,0 -71.4625377369953,-43.1452261925147,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=255, G=255, B=255]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.462688328227,-43.145639207448,0 -71.46272452897691,-43.145603619408,0 -71.4626923906179,-43.1455860911358,0 -71.4627193392279,-43.1455595986191,0 -71.46259591235,-43.1454922813965,0 -71.46253276292779,-43.1455543618755,0 -71.462688328227,-43.145639207448,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.459436339631,-43.1534015538729,0 -71.4586785823327,-43.1540722863186,0 -71.4595913194791,-43.1549324322345,0 -71.4605456380239,-43.1540732996314,0 -71.459436339631,-43.1534015538729,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4586785823327,-43.1540722863186,0 -71.4595913194791,-43.1549324322345,0 -71.4605456380239,-43.1540732996314,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.455289684056,-43.1517389503636,0 -71.4546125735057,-43.15234575771,0 -71.45594118409031,-43.1530851123334,0 -71.4566182898118,-43.1524782971756,0 -71.45556642188571,-43.1518929530612,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4575594936789,-43.1532523854015,0 -71.45691091610399,-43.1526411343346,0 -71.4566182898118,-43.1524782971756,0 -71.45594118409031,-43.1530851123334,0 -71.45615218937991,-43.1532025309945,0 -71.4568610438927,-43.1538705955791,0 -71.4575594936789,-43.1532523854015,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4584264934381,-43.1540694634348,0 -71.4575594936789,-43.1532523854015,0 -71.4568610438927,-43.1538705955791,0 -71.4577280429495,-43.1546876788138,0 -71.4584264934381,-43.1540694634348,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4558011488358,-43.1488995363732,0 -71.4553895403438,-43.1488860542906,0 -71.45568637057789,-43.1496762920487,0 -71.4556651614364,-43.1498244778233,0 -71.4554419823755,-43.1502481207654,0 -71.4561845384994,-43.1502256301432,0 -71.456766401051,-43.1497041439843,0 -71.4563548976831,-43.1492753636719,0 -71.4558011488358,-43.1488995363732,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4551076668134,-43.15071509266,0 -71.45590197364859,-43.1511902186793,0 -71.4571334193656,-43.1500865652474,0 -71.456766401051,-43.1497041439843,0 -71.4561845384994,-43.1502256301432,0 -71.4554419823755,-43.1502481207654,0 -71.4551076668134,-43.15071509266,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4592926386089,-43.1468961793226,0 -71.4584902987354,-43.1464896371993,0 -71.457362415641,-43.1473067398713,0 -71.4580662386915,-43.1476829961648,0 -71.45818002259,-43.1477065630957,0 -71.4592926386089,-43.1468961793226,0 -71.4584902987354,-43.1464896371993,0 -71.457362415641,-43.1473067398713,0 -71.4580662386915,-43.1476829961648,0 -71.45818002259,-43.1477065630957,0 -71.4592926386089,-43.1468961793226,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4648875715105,-43.1485764709939,0 -71.4644426965547,-43.1491202351286,0 -71.4646540638651,-43.1496647917228,0 -71.4649159847186,-43.1498607246621,0 -71.4649485500514,-43.1503715811824,0 -71.46610284791269,-43.1501946792904,0 -71.4658959962474,-43.1492731392373,0 -71.4648875715105,-43.1485764709939,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4554419823755,-43.1502481207654,0 -71.4556651614364,-43.1498244778233,0 -71.45568637057789,-43.1496762920487,0 -71.45534521055311,-43.1487680352886,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4556799510774,-43.151775236817,0 -71.4563927638318,-43.1521719052151,0 -71.4571814884745,-43.1515034130293,0 -71.45627382484069,-43.1508569625473,0 -71.45541420868931,-43.1516273531679,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4571334193656,-43.1500865652474,0 -71.45627382484069,-43.1508569625473,0 -71.4571814884745,-43.1515034130293,0 -71.4579498988744,-43.1508521189787,0 -71.4571334193656,-43.1500865652474,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4559295126714,-43.1484967099008,0 -71.45598853666,-43.1488303457496,0 -71.4564705136806,-43.1491574610847,0 -71.4571535000232,-43.1494292918747,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.45816702658431,-43.152205303228,0 -71.4571814884745,-43.1515034130293,0 -71.4563927638318,-43.1521719052151,0 -71.457050450541,-43.1525378884099,0 -71.4574154594623,-43.1528818919206,0 -71.45816702658431,-43.152205303228,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4589185770991,-43.1515287094289,0 -71.4582421774399,-43.1511261613813,0 -71.4579498988744,-43.1508521189787,0 -71.4571814884745,-43.1515034130293,0 -71.45816702658431,-43.152205303228,0 -71.4589185770991,-43.1515287094289,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Polilínea 3D CAD</name>
+			<styleUrl>#featureStyle-Color [A=255, R=0, G=255, B=0]</styleUrl>
+			<LineString>
+				<coordinates>
+					-71.4551076668134,-43.15071509266,0 -71.4545896859905,-43.1512148407159,0 -71.4541543706102,-43.1514306121034,0 -71.45491608979999,-43.152073756981,0 -71.45590197364859,-43.1511902186793,0 -71.4551076668134,-43.15071509266,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
