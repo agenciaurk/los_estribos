@@ -341,8 +341,6 @@ nav.fixed {
     background-color: rgba(0,0,0,0.1);
     color: #fafafa;
     border: 1px solid #fafafa
-
-
 }
 
 #prev_btn {
@@ -445,6 +443,28 @@ span.dotref {
     height: calc(90vh - 80px);
     height: calc(90vh - 80px);
 }
+
+/* MOBILE */
+.mobile {
+    background-color: #a06732;
+}
+.abtn {
+    background-color: #fafafa;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    width: 66%;
+    border: 1px solid rgba(50,50,50,0.1);
+    color: #a06732;
+    font-weight: bold;
+    transition: all ease-out 0.1s;
+    display: inline-block
+}
+.abtn:hover {
+    background-color: rgba(0,0,0,0.1);
+    color: #fafafa;
+    border: 1px solid #fafafa
+}
+
 
 /* CONTACTO */
 #contacto {
