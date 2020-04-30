@@ -452,7 +452,7 @@ span.dotref {
     background-color: #fafafa;
     font-size: 1rem;
     line-height: 2.5rem;
-    width: 66%;
+    width: 250px;
     border: 1px solid rgba(50,50,50,0.1);
     color: #a06732;
     font-weight: bold;
@@ -658,3 +658,7 @@ textarea.materialize-textarea {
 
 footer {background-color: #37474f;text-align: center;padding-top: 50px;}
 .creditos {margin-top: 80px;background-color: #151515;padding-top: 20px;padding-bottom: 20px;}
+
+@media only screen and (max-width: 601px) { .celular {width: 200px}}
+@media only screen and (max-width: 993px) { .celular {width: 300px}}
+
