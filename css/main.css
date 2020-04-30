@@ -160,6 +160,7 @@ nav .nav-wrapper .nav-logo svg {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 172px;
 }
 
 nav .nav-wrapper ul {
