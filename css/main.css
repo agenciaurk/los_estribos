@@ -45,7 +45,8 @@ body {
     color: #fafafa;
    position: relative
     background-color: gray;
-    
+     overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 }
 html{ scroll-behavior: smooth; }
 
@@ -53,8 +54,7 @@ html, body {
     height: 100%;
      overflow-x: hidden !important;
         width: 100%;
-     overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
+
 
 }
 .noclickable {pointer-events: none;}
