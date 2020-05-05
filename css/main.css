@@ -43,13 +43,16 @@ h6 { font-size: 1.5rem; margin: 1rem 0 0.5rem 0 }
 
 body {
     color: #fafafa;
-    overflow-x: hidden !important;
+   position: relative
     background-color: gray;
 }
 html{ scroll-behavior: smooth; }
 
 html, body {
     height: 100%;
+     overflow-x: hidden !important;
+        width: 100%;
+
 }
 .noclickable {pointer-events: none;}
 .material-icons { font-family: 'Material Icons' !important; }
