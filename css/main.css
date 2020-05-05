@@ -90,6 +90,9 @@ header {
     position: relative;
     z-index: 1;
     background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 .big-logo, .godown {
