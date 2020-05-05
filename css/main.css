@@ -331,7 +331,7 @@ nav.fixed {
 
 #location {
     background-color: #fafafa;
-    font-size: 1rem;
+    font-size: 13px;
     line-height: 2.5rem;
     grid-area: btn;
     width: 66%;
@@ -340,6 +340,7 @@ nav.fixed {
     color: #37474f;
     font-weight: bold;
     transition: all ease-out 0.1s;
+    letter-spacing: -1px;
 }
 #location:hover {
     background-color: rgba(0,0,0,0.1);
