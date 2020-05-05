@@ -83,7 +83,9 @@ header {
     height: 100%;
     background-image: url("../images/galeria/7.jpg");
     background-position: center;
-
+    background-size: cover;
+    background-position: bottom;
+    z-index: 1;
 
 }
 
