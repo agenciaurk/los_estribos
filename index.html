@@ -20,7 +20,7 @@
         <meta name="author" content="Agencia URK">
         
           <!-- RESOURCES -->
-        <link rel="preload" href="https://www.fincaslosestribos.com/images/galeria/7.jpg">
+        <link rel="preload" href="/images/galeria/7.jpg" as="image">
         <link rel="preload" href="css/main.css">        
         <link type="text/css" rel="stylesheet" href="css/main.css">        
         
@@ -58,6 +58,23 @@
       
     </head>
     <body>
+        <div class="hidden">
+	<script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+				"https://fincaslosestribos.com/images/galeria/7.jpg"
+			)
+		//--><!]]>
+	</script>
+</div>
+        
         <header>
             <div class="big-logo">
                 <svg version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
