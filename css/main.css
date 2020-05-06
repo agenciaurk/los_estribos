@@ -485,12 +485,12 @@ span.dotref {
 }
 
 .select-wrapper input.select-dropdown, .dropdown-content li > a, .dropdown-content li > span {
-    font-size: 1rem;
-    color: #212121
+    font-size: 1rem !important;
+    color: #212121 !important
 }
 
 form > .row {
-    margin: 10px 0 0 0 ;
+    margin: 10px 0 0 0 !important ;
 }
 
 .input-field > label {
@@ -504,79 +504,79 @@ form > .row {
 input[type="text"]:not(.browser-default), 
 input[type="email"]:not(.browser-default)  {
     background-color: var(--formBackgroundColor) !important;
-    border: 1px solid rgba(0, 0, 0, 0.075);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 1px;
-    padding: 0 1rem;
-    width: calc(100% - 2rem);
+    border: 1px solid rgba(0, 0, 0, 0.075) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5) !important;
+    border-radius: 1px !important;
+    padding: 0 1rem !important;
+    width: calc(100% - 2rem) !important;
 }
 
 input.valid[type="text"]:not(.browser-default), input.valid[type="email"]:not(.browser-default),
 input.valid[type="text"]:not(.browser-default).validate, input.valid[type="email"]:not(.browser-default).validate {
-    border-bottom: 1px solid var(--formLabelColor);
-    -webkit-box-shadow: 0 1px 0 0 var(--formLabelColor);
-    box-shadow: 0 1px 0 0 var(--formLabelColor);
+    border-bottom: 1px solid var(--formLabelColor) !important;
+    -webkit-box-shadow: 0 1px 0 0 var(--formLabelColor) !important;
+    box-shadow: 0 1px 0 0 var(--formLabelColor) !important;
 }
 
 input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label,
 input[type="email"]:not(.browser-default):focus:not([readonly]) + label {
-    font-size: var(--formLabelFontSize);
-    transition: all .2s;
+    font-size: var(--formLabelFontSize) !important;
+    transition: all .2s !important;
     top: -0rem;
-    text-shadow: 0 0 1px rgba(5, 0, 0, 0.25);
-    color: var(--formLabelColor)
+    text-shadow: 0 0 1px rgba(5, 0, 0, 0.25) !important;
+    color: var(--formLabelColor) !important
 }
 
 input[type="text"]:not(.browser-default).validate + label.active,
 input[type="email"]:not(.browser-default).validate + label.active,
 textarea.materialize-textarea:not(.browser-default) + label.active{
-    font-size: var(--formLabelFontSize);
-    top: -0.5rem;
-    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25);
-    color: var(--formLabelColor)
+    font-size: var(--formLabelFontSize) !important;
+    top: -0.5rem !important;
+    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25) !important;
+    color: var(--formLabelColor) !important
 }
 
 input[type="text"]:not(.browser-default), input[type="email"]:not(.browser-default) {
-    color: #212121;
+    color: #212121 !important;
 }
 input[type="email"]:not(.browser-default).validate.invalid + label.active {
-    color: #fafafa;
-    font-size: var(--formLabelFontSize);
-    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25);
+    color: #fafafa !important;
+    font-size: var(--formLabelFontSize) !important;
+    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25) !important;
 }
 
 input {
-    color: var(--formLabelColor);
+    color: var(--formLabelColor) !important;
 }
 
 label {
-    font-family: 'Lato', sans-serif;
+    font-family: 'spartan_mbregular', sans-serif;
 }
 
 .input-field.col label {
-    left: 1.25rem;
-    color: var(--formLabelColor)
+    left: 1.25rem !important;
+    color: var(--formLabelColor) 
 }
 
 input[type="text"]:not(.browser-default).invalid ~ .helper-text[data-error] {
-    font-size: 12px;
-    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25);
+    font-size: 12px !important;
+    text-shadow: 0 0 1px rgba(250, 250, 250, 0.25) !important;
 }
 input:not([type]).invalid ~ .helper-text::after, input:not([type]):focus.invalid ~ .helper-text::after, input[type="text"]:not(.browser-default).invalid ~ .helper-text::after, input[type="text"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="password"]:not(.browser-default).invalid ~ .helper-text::after, input[type="password"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="email"]:not(.browser-default).invalid ~ .helper-text::after, input[type="email"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="url"]:not(.browser-default).invalid ~ .helper-text::after, input[type="url"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="time"]:not(.browser-default).invalid ~ .helper-text::after, input[type="time"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="date"]:not(.browser-default).invalid ~ .helper-text::after, input[type="date"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="datetime"]:not(.browser-default).invalid ~ .helper-text::after, input[type="datetime"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="datetime-local"]:not(.browser-default).invalid ~ .helper-text::after, input[type="datetime-local"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="tel"]:not(.browser-default).invalid ~ .helper-text::after, input[type="tel"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="number"]:not(.browser-default).invalid ~ .helper-text::after, input[type="number"]:not(.browser-default):focus.invalid ~ .helper-text::after, input[type="search"]:not(.browser-default).invalid ~ .helper-text::after, input[type="search"]:not(.browser-default):focus.invalid ~ .helper-text::after, textarea.materialize-textarea.invalid ~ .helper-text::after, textarea.materialize-textarea:focus.invalid ~ .helper-text::after, .select-wrapper.invalid ~ .helper-text::after {
     color: #fafafa !important
 }
 
 textarea.materialize-textarea {
-    max-height: 250px;
-    min-height: 6rem;
+    max-height: 250px !important;
+    min-height: 6rem !important;
     overflow-y: visible !important;
-    background-color: var(--formBackgroundColor);
-    border: 1px solid rgba(0, 0, 0, 0.075);
-    border-bottom: 1px solid rgba(255, 250, 250, 0.5);
-    border-radius: 1px;
-    padding: 0.8rem 1rem;
-    color: #212121
+    background-color: var(--formBackgroundColor) !important;
+    border: 1px solid rgba(0, 0, 0, 0.075) !important;
+    border-bottom: 1px solid rgba(255, 250, 250, 0.5) !important;
+    border-radius: 1px !important;
+    padding: 0.8rem 1rem !important;
+    color: #212121 !important
 }
 
 
