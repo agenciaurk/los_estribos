@@ -667,7 +667,22 @@ footer {background-color: #37474f;text-align: center;padding-top: 50px;}
 @media only screen and (max-width: 601px) { .celular {width: 200px}}
 @media only screen and (max-width: 993px) { .celular {width: 300px}}
 
-
 .bg-stage1.lazyloaded {
 		background-image: url('/images/galeria/5.jpg');
+	}
+
+.bg-stage2.lazyloaded {
+		background-image: url('/images/galeria/8.jpg');
+	}
+.bg-stage3.lazyloaded {
+		background-image: url('/images/galeria/9.jpg');
+	}
+.bg-stage4.lazyloaded {
+		background-image: url('/images/galeria/4.jpg');
+	}
+.bg-stage5.lazyloaded {
+		background-image: url('/images/galeria/2.jpg');
+	}
+.bg-stage6.lazyloaded {
+		background-image: url('/images/galeria/12.jpg');
 	}
