@@ -734,9 +734,3 @@ footer {background-color: #37474f;text-align: center;padding-top: 50px;}
 .carousel-item.bg-stage-slider15.lazyloaded {
 		background-image: url('/images/slider/slider_hoya.jpg');
 	}
-
-.row.bg-stage-contacto.lazyloaded {
-    
-    background-image: url('/images/galeria/6.jpg');padding: 50px 0px 50px 0px; margin-bottom: 0 !important; background-size: cover;background-position: bottom;
-    
-}
