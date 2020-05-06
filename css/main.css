@@ -693,44 +693,50 @@ footer {background-color: #37474f;text-align: center;padding-top: 50px;}
 	}
 
 .carousel-item.bg-stage-slider2.lazyloaded {
-		background-image: url('images/slider/slider_molino.jpg');
+		background-image: url('/images/slider/slider_molino.jpg');
 	}
 .carousel-item.bg-stage-slider3.lazyloaded {
-		background-image: url('images/slider/slider_tulipanes.jpg');
+		background-image: url('/images/slider/slider_tulipanes.jpg');
 	}
 .carousel-item.bg-stage-slider4.lazyloaded {
-		background-image: url('images/slider/slider_frutas.jpg');
+		background-image: url('/images/slider/slider_frutas.jpg');
 	}
 .carousel-item.bg-stage-slider5.lazyloaded {
-		background-image: url('images/slider/slider_vinedos.jpg');
+		background-image: url('/images/slider/slider_vinedos.jpg');
 	}
 .carousel-item.bg-stage-slider6.lazyloaded {
-		background-image: url('images/slider/slider_chile.jpg');
+		background-image: url('/images/slider/slider_chile.jpg');
 	}
 .carousel-item.bg-stage-slider7.lazyloaded {
-		background-image: url('images/slider/slider_cipreses.jpg');
+		background-image: url('/images/slider/slider_cipreses.jpg');
 	}
 .carousel-item.bg-stage-slider8.lazyloaded {
-		background-image: url('images/slider/slider_baguilt.jpg');
+		background-image: url('/images/slider/slider_baguilt.jpg');
 	}
 .carousel-item.bg-stage-slider9.lazyloaded {
-		background-image: url('images/slider/slider_piscicultura.jpg');
+		background-image: url('/images/slider/slider_piscicultura.jpg');
 	}
 .carousel-item.bg-stage-slider10.lazyloaded {
-		background-image: url('images/slider/slider_pnalerces.jpg');
+		background-image: url('/images/slider/slider_pnalerces.jpg');
 	}
 .carousel-item.bg-stage-slider11.lazyloaded {
-		background-image: url('images/slider/slider_represa.jpg');
+		background-image: url('/images/slider/slider_represa.jpg');
 	}
 .carousel-item.bg-stage-slider12.lazyloaded {
-		background-image: url('images/slider/slider_trevelin.jpg');
+		background-image: url('/images/slider/slider_trevelin.jpg');
 	}
 .carousel-item.bg-stage-slider13.lazyloaded {
-		background-image: url('images/slider/slider_aeropuerto.jpg');
+		background-image: url('/images/slider/slider_aeropuerto.jpg');
 	}
 .carousel-item.bg-stage-slider14.lazyloaded {
-	background-image: url('images/slider/slider_esquel.jpg');
+	background-image: url('/images/slider/slider_esquel.jpg');
 	}
 .carousel-item.bg-stage-slider15.lazyloaded {
-		background-image: url('images/slider/slider_hoya.jpg');
+		background-image: url('/images/slider/slider_hoya.jpg');
 	}
+
+.row.bg-stage-contacto.lazyloaded {
+    
+    background-image: url('/images/galeria/6.jpg');padding: 50px 0px 50px 0px; margin-bottom: 0 !important; background-size: cover;background-position: bottom;
+    
+}
