@@ -688,49 +688,49 @@ footer {background-color: #37474f;text-align: center;padding-top: 50px;}
 	}
 
 
-.bg-stage-slider1.lazyloaded {
+.carousel-item.bg-stage-slider1.lazyloaded {
 		background-image: url('images/slider/slider_nantyfall.jpg');
 	}
 
-.bg-stage-slider2.lazyloaded {
+.carousel-item.bg-stage-slider2.lazyloaded {
 		background-image: url('images/slider/slider_molino.jpg');
 	}
-.bg-stage-slider3.lazyloaded {
+.carousel-item.bg-stage-slider3.lazyloaded {
 		background-image: url('images/slider/slider_tulipanes.jpg');
 	}
-.bg-stage-slider4.lazyloaded {
+.carousel-item.bg-stage-slider4.lazyloaded {
 		background-image: url('images/slider/slider_frutas.jpg');
 	}
-.bg-stage-slider5.lazyloaded {
+.carousel-item.bg-stage-slider5.lazyloaded {
 		background-image: url('images/slider/slider_vinedos.jpg');
 	}
-.bg-stage-slider6.lazyloaded {
+.carousel-item.bg-stage-slider6.lazyloaded {
 		background-image: url('images/slider/slider_chile.jpg');
 	}
-.bg-stage-slider7.lazyloaded {
+.carousel-item.bg-stage-slider7.lazyloaded {
 		background-image: url('images/slider/slider_cipreses.jpg');
 	}
-.bg-stage-slider8.lazyloaded {
+.carousel-item.bg-stage-slider8.lazyloaded {
 		background-image: url('images/slider/slider_baguilt.jpg');
 	}
-.bg-stage-slider9.lazyloaded {
+.carousel-item.bg-stage-slider9.lazyloaded {
 		background-image: url('images/slider/slider_piscicultura.jpg');
 	}
-.bg-stage-slider10.lazyloaded {
+.carousel-item.bg-stage-slider10.lazyloaded {
 		background-image: url('images/slider/slider_pnalerces.jpg');
 	}
-.bg-stage-slider11.lazyloaded {
+.carousel-item.bg-stage-slider11.lazyloaded {
 		background-image: url('images/slider/slider_represa.jpg');
 	}
-.bg-stage-slider12.lazyloaded {
+.carousel-item.bg-stage-slider12.lazyloaded {
 		background-image: url('images/slider/slider_trevelin.jpg');
 	}
-.bg-stage-slider13.lazyloaded {
+.carousel-item.bg-stage-slider13.lazyloaded {
 		background-image: url('images/slider/slider_aeropuerto.jpg');
 	}
-.bg-stage-slider14.lazyloaded {
+.carousel-item.bg-stage-slider14.lazyloaded {
 	background-image: url('images/slider/slider_esquel.jpg');
 	}
-.bg-stage-slider15.lazyloaded {
+.carousel-item.bg-stage-slider15.lazyloaded {
 		background-image: url('images/slider/slider_hoya.jpg');
 	}
