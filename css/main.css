@@ -228,7 +228,7 @@ nav.fixed {
     margin: 1rem 0;
     text-align: justify;
     line-height: 1.7;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 /* 360 */
