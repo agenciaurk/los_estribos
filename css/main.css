@@ -397,7 +397,7 @@ nav.fixed {
 
 .carousel.carousel-slider .carousel-item {
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: bottom;
 	background-size: cover;
 }
 
