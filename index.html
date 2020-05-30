@@ -6,7 +6,7 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="robots" content="noodp"/>
         <meta name="theme-color" content="#874537">
         
@@ -19,7 +19,7 @@
         <!-- CREDITS -->
         <meta name="author" content="Agencia URK">
         
-          <!-- RESOURCES -->
+        <!-- RESOURCES -->
         <link rel="preload" href="css/main.css">        
         <link type="text/css" rel="stylesheet" href="css/main.css">        
         
@@ -31,7 +31,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <!-- FONTAWESOME -->
         <script src="https://kit.fontawesome.com/f76c31ebb8.js" crossorigin="anonymous"></script>
-       
             
         <!-- SEO -->
         <title>Los Estribos · Fincas Del Valle</title>
@@ -51,10 +50,10 @@
         <meta name="twitter:description" content="Los Estribos Fincas del Valle es un desarrollo inmobiliario único en la patagonia, muy cerca de Trevelin, Esquel, el Parque Nacional Los Alerces, La Hoya, y mucho más."/>
         <meta name="twitter:title" content="Los Estribos · Fincas Del Valle"/>
         <meta name="twitter:image" content="images/redes.jpg"/>
-            
+    
         <!-- AFRAME -->
-         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-      
+        <!-- <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>-->
+        <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
     </head>
     <body>
         <div class="hidden">
@@ -634,10 +633,14 @@
 
             <div id="360" class="a360">
                 <a id="jump360" class="jump360"><i class="fas fa-chevron-circle-up iconeffect"></i></a>
-                <a-scene device-orientation-permission-ui="enabled: false" embedded="" class="vr360" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
-                    <!--Imagen 360-->
-                    <a-sky src="images/estribos_360.jpg" rotation="0 0 0"></a-sky>
+            
+                
+                <a-scene embedded style="width: 100%; height: 500px">
+            <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
+            <a-sky src="images/estribos_360.jpg" rotation="0 90 0"></a-sky>
+                    
                 </a-scene>
+                
             </div>
 
             <div id="ventajas" style="text-align: center;" class="padding-section">
