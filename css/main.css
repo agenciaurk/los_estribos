@@ -47,6 +47,7 @@ body {
     background-color: gray;
      overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
 }
 html{ scroll-behavior: smooth; }
 
@@ -54,7 +55,7 @@ html, body {
     height: 100%;
      overflow-x: hidden !important;
         width: 100%;
-
+  scroll-behavior: smooth;
 
 }
 .noclickable {pointer-events: none;}
@@ -255,8 +256,8 @@ nav.fixed {
     box-shadow: 0 0 3px -1px rgba(0,0,0,0.75);
 }
 
-/* VENTAJAS */
-#ventajas {
+/* CARACTERISTICASS */
+#caracteristicas {
     background-color: #37474f;
 }
 
