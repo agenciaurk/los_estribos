@@ -580,21 +580,21 @@
                         </svg>
                     </a>
                     <a style="display: none" id="sidenav-trigger" href="#" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="#360" class="toUpperCase">360°</a></li>
+                    <ul class="right hide-on-med-and-down">                        
                         <li><a href="#caracteristicas" class="toUpperCase">Características</a></li>
                         <li><a href="#galeria" class="toUpperCase">Galeria</a></li>
                         <li><a href="#fincas" class="toUpperCase">Fincas</a></li>
                         <li><a href="#contacto" class="toUpperCase">Contacto</a></li>
+                        <li><a href="#360" class="toUpperCase">360°</a></li>
                     </ul>
                 </div>
             </nav>
             <ul id="sidenav">
-                <li><a href="#360" class="toUpperCase">360°</a></li>
                 <li><a href="#caracteristicas" class="toUpperCase">Características</a></li>
                 <li><a href="#galeria" class="toUpperCase">Galeria</a></li>
                 <li><a href="#fincas" class="toUpperCase">Fincas</a></li>
                 <li><a href="#contacto" class="toUpperCase">Contacto</a></li>
+                <li><a href="#360" class="toUpperCase">360°</a></li>
             </ul>
         
             <div id="presentacion" class="padding-section">
@@ -626,19 +626,10 @@
                 </div>
             </div>
 
-            <div id="360" class="a360">
-                <a id="jump360" class="jump360"><i class="fas fa-chevron-circle-up iconeffect"></i></a>
-            
-                
-                <a-scene embedded style="width: 100%; height: 600px">
-            <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
-            <a-sky src="images/estribos_360.jpg" ></a-sky>
-                    
-                </a-scene>
-                
-            </div>
+                        <iframe src="https://snazzymaps.com/embed/240830" width="100%" height="600px" style="border:none;"></iframe>
 
-            <div id="caracteristicas" style="text-align: center;" class="padding-section">
+
+            <div id="caracteristicas" style="text-align: center;margin-top: -5px;" class="padding-section">
              
 
                 <div class="row items">
@@ -986,7 +977,6 @@
                 
             </div>
             
-            <iframe src="https://snazzymaps.com/embed/240830" width="100%" height="600px" style="border:none;"></iframe>
 
             <div id="fincas" style="margin: auto;margin-top: -20px;">
                 <h3 class="center">Descubri tu finca</h3>
@@ -1050,7 +1040,18 @@
                     <div class="col s12 m12 l12 xl2"></div>
                 </div>
             </div>
-
+<div id="360" class="a360">
+                <a id="jump360" class="jump360"><i class="fas fa-chevron-circle-up iconeffect"></i></a>
+            
+                
+                <a-scene embedded style="width: 100%; height: 600px">
+            <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
+            <a-sky src="images/estribos_360.jpg" ></a-sky>
+                    
+                </a-scene>
+                
+            </div> 
+            
             <div style="padding: 0" id="contacto">
                 <div class="row" style="background-image: url('https://www.fincaslosestribos.com/images/galeria/6.jpg');padding: 50px 0px 50px 0px; margin-bottom: 0 !important; background-size: cover;background-position: bottom;">
                     
@@ -1166,8 +1167,7 @@
                 
                  
             </div>
-            
-          
+                   
             
 <footer>
 
