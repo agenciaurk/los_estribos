@@ -669,9 +669,6 @@ footer {background-color: #151515;text-align: center;padding-top: 90px;}
 		background-image: url('/images/galeria/5.jpg');
 	}
 
-.bg-stage2.lazyloaded {
-		background-image: url('/images/galeria/8.jpg');
-	}
 .bg-stage3.lazyloaded {
 		background-image: url('/images/galeria/9.jpg');
 	}
@@ -683,6 +680,21 @@ footer {background-color: #151515;text-align: center;padding-top: 90px;}
 	}
 .bg-stage6.lazyloaded {
 		background-image: url('/images/galeria/12.jpg');
+	}
+
+.bg-stage7.lazyloaded {
+		background-image: url('/images/galeria/3.jpg');
+	}
+
+.bg-stage8.lazyloaded {
+		background-image: url('/images/galeria/10.jpg');
+	}
+
+.bg-stage9.lazyloaded {
+		background-image: url('/images/galeria/13.jpg');
+	}
+.bg-stage10.lazyloaded {
+		background-image: url('/images/galeria/1.jpg');
 	}
 
 
