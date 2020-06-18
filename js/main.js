@@ -96,20 +96,20 @@ const places = [
     }
 ]
 
-function getScrollbarWidth(){
-    const outer = document.createElement('div')
-    outer.style.visibility = 'hidden'
-    outer.style.overflow = 'scroll'
-    outer.style.msOverflowStyle = 'scrollbar'
-    document.body.appendChild(outer)
-    const inner = document.createElement('div')
-    outer.appendChild(inner)
-    const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth)
-    outer.parentNode.removeChild(outer) 
-    return scrollbarWidth
-}
+// function getScrollbarWidth(){
+//     const outer = document.createElement('div')
+//     outer.style.visibility = 'hidden'
+//     outer.style.overflow = 'scroll'
+//     outer.style.msOverflowStyle = 'scrollbar'
+//     document.body.appendChild(outer)
+//     const inner = document.createElement('div')
+//     outer.appendChild(inner)
+//     const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth)
+//     outer.parentNode.removeChild(outer) 
+//     return scrollbarWidth
+// }
 
-const scrollbarWidth = getScrollbarWidth()
+// const scrollbarWidth = getScrollbarWidth()
 
 class Overlay {
     constructor(options){
@@ -166,169 +166,169 @@ class Overlay {
     }
 }
 
-class Popup {
-    constructor(element, options){
-        this.options = options || {}
+// class Popup {
+//     constructor(element, options){
+//         this.options = options || {}
 
-        this.element = element || document.createElement("div")
-        this.big = options.big || false
-        this.animTime = options.animTime || 300
-        this.displayed = false
-        this.setStyle()
-        this.setAnim()
-        this.addCloseButton()
+//         this.element = element || document.createElement("div")
+//         this.big = options.big || false
+//         this.animTime = options.animTime || 300
+//         this.displayed = false
+//         this.setStyle()
+//         this.setAnim()
+//         this.addCloseButton()
 
-        if(this.options.setOverlay){
-            if(!this.options.overlay) this.options.overlay = {}
-            this.options.overlay.overwrite = true
-            this.overlay = new Overlay(this.options.overlay)
-        }
+//         if(this.options.setOverlay){
+//             if(!this.options.overlay) this.options.overlay = {}
+//             this.options.overlay.overwrite = true
+//             this.overlay = new Overlay(this.options.overlay)
+//         }
 
-        this.caosclick = 0
-        this.caosTimedout = null
-        // this.closebuttonref = null
-    }
+//         this.caosclick = 0
+//         this.caosTimedout = null
+//         // this.closebuttonref = null
+//     }
 
-    addClass(clazz){
-        this.element.classList.add(clazz)
-        this.setAnim()
-    }
+//     addClass(clazz){
+//         this.element.classList.add(clazz)
+//         this.setAnim()
+//     }
 
-    setId(id){
-        this.element.setAttribute("id", id)
-    }
+//     setId(id){
+//         this.element.setAttribute("id", id)
+//     }
 
-    /**
-     * @param {{top:string, left:string, bottom:string, right:string}} position 
-     */
-    show(display, position){
-        if(!this.displayed){
-            this.displayed = true
-            if(this.overlay) {
-                this.overlay.show()
-                this.overlay.removeOnClick()
-            }
+//     /**
+//      * @param {{top:string, left:string, bottom:string, right:string}} position 
+//      */
+//     show(display, position){
+//         if(!this.displayed){
+//             this.displayed = true
+//             if(this.overlay) {
+//                 this.overlay.show()
+//                 this.overlay.removeOnClick()
+//             }
 
-            this.addCloseShortcut()
+//             this.addCloseShortcut()
 
-            if(position){
-                if(position.top) this.element.style.top = position.top
-                if(position.bottom) this.element.style.bottom = position.bottom
-                if(position.left) this.element.style.left = position.left
-                if(position.right) this.element.style.right = position.right
-            }
+//             if(position){
+//                 if(position.top) this.element.style.top = position.top
+//                 if(position.bottom) this.element.style.bottom = position.bottom
+//                 if(position.left) this.element.style.left = position.left
+//                 if(position.right) this.element.style.right = position.right
+//             }
 
-            this.element.style.display = display ? display : "inline"
-            this.element.scrollTo(0, 0)
+//             this.element.style.display = display ? display : "inline"
+//             this.element.scrollTo(0, 0)
 
-            if(document.body.clientHeight > window.innerHeight) document.body.style.borderRight = `${scrollbarWidth}px solid transparent`
-            document.body.style.overflow = "hidden"
+//             if(document.body.clientHeight > window.innerHeight) document.body.style.borderRight = `${scrollbarWidth}px solid transparent`
+//             document.body.style.overflow = "hidden"
 
-            this.element.addEventListener("mouseleave", e => {
-                e.preventDefault()
-                document.onclick = () => {
-                    clearTimeout(this.caosTimedout)
-                    this.caosclick++
-                    if(this.caosclick >= 4) {
-                        this.element.scrollTo(0, 0)
-                        this.closebuttonref.classList.add("blr")
-                    }
-                    this.caosTimedout = setTimeout(() => this.caosclick = 0 , 1000)
-                }
-            })
-            this.element.addEventListener("mouseover", e => {
-                e.preventDefault()
-                document.onclick = null
-                this.caosclick = 0
-            })
+//             this.element.addEventListener("mouseleave", e => {
+//                 e.preventDefault()
+//                 document.onclick = () => {
+//                     clearTimeout(this.caosTimedout)
+//                     this.caosclick++
+//                     if(this.caosclick >= 4) {
+//                         this.element.scrollTo(0, 0)
+//                         this.closebuttonref.classList.add("blr")
+//                     }
+//                     this.caosTimedout = setTimeout(() => this.caosclick = 0 , 1000)
+//                 }
+//             })
+//             this.element.addEventListener("mouseover", e => {
+//                 e.preventDefault()
+//                 document.onclick = null
+//                 this.caosclick = 0
+//             })
 
-            return new Promise(res => setTimeout(() => {
-                this.element.style.transform = "scale(1)"
-                res()
-            }, 50))
-        }
-    }
+//             return new Promise(res => setTimeout(() => {
+//                 this.element.style.transform = "scale(1)"
+//                 res()
+//             }, 50))
+//         }
+//     }
 
-    hide(){
-        if(this.displayed){
-            this.displayed = false
-            if(this.overlay) {
-                this.overlay.hide() 
-                this.overlay.addOnClick()
-            }
-            this.removeCloseShortcut()
-            this.element.style.transform = "scale(0.5, 0)"
-            document.body.style.borderRight = "none"
-            document.body.style.overflow = "auto"
-            this.closebuttonref.classList.remove("blr")
-            return new Promise(res => setTimeout(() => {
-                this.element.style.display = "none"
-                res()
-            }, this.animTime))
-        }
-    }
+//     hide(){
+//         if(this.displayed){
+//             this.displayed = false
+//             if(this.overlay) {
+//                 this.overlay.hide() 
+//                 this.overlay.addOnClick()
+//             }
+//             this.removeCloseShortcut()
+//             this.element.style.transform = "scale(0.5, 0)"
+//             document.body.style.borderRight = "none"
+//             document.body.style.overflow = "auto"
+//             this.closebuttonref.classList.remove("blr")
+//             return new Promise(res => setTimeout(() => {
+//                 this.element.style.display = "none"
+//                 res()
+//             }, this.animTime))
+//         }
+//     }
 
-    setAnim() {
-        this.element.style.display = "none"
-        this.element.style.transform = "scale(0.5, 0)"
-        this.element.style.transformOrigin = "top"
-        this.element.style.transition = `transform ${this.animTime.toString()}ms`
-    }
+//     setAnim() {
+//         this.element.style.display = "none"
+//         this.element.style.transform = "scale(0.5, 0)"
+//         this.element.style.transformOrigin = "top"
+//         this.element.style.transition = `transform ${this.animTime.toString()}ms`
+//     }
 
-    addCloseButton() {
-        let li = document.createElement("li")
-        li.style.listStyle = "none"
-        li.style.margin = "12px"
-        li.style.textAlign = "unset"
+//     addCloseButton() {
+//         let li = document.createElement("li")
+//         li.style.listStyle = "none"
+//         li.style.margin = "12px"
+//         li.style.textAlign = "unset"
         
-        let a = document.createElement("a")
-        a.setAttribute("href", "#")
-        li.appendChild(a)
+//         let a = document.createElement("a")
+//         a.setAttribute("href", "#")
+//         li.appendChild(a)
 
-        let i = document.createElement("i")
-        this.closebuttonref = i
-        i.classList.add("material-icons")
-        i.style.color = "rgb(20,20,20)"
-        i.innerText = "close"
-        a.appendChild(i)
+//         let i = document.createElement("i")
+//         this.closebuttonref = i
+//         i.classList.add("material-icons")
+//         i.style.color = "rgb(20,20,20)"
+//         i.innerText = "close"
+//         a.appendChild(i)
 
-        a.addEventListener("click", e => { 
-            e.preventDefault();
-            this.hide() 
-        })
-        this.element.prepend(li)
-    }
+//         a.addEventListener("click", e => { 
+//             e.preventDefault();
+//             this.hide() 
+//         })
+//         this.element.prepend(li)
+//     }
 
-    setStyle() {
-        let s = this.element.style
-        s.height = "80%"
-        s.minHeight = "500px"
-        if(this.big){
-            s.width = "68%"
-            s.left = "16%"
-        } else {
-            s.width = "50%"
-            s.left = "calc(50% - 25%)"
-        }
-        s.top = "calc(50% - 40%)"
-        s.borderRadius = "4px"
-        s.borderTop = "3px solid #424953"
-        s.boxShadow = "0 0 3px 0 rgba(0,0,0,0.5)"
-        s.position = "absolute"
-        s.backgroundColor = "#fafafa"
-        s.zIndex = "1001"
-        s.overflowY = "auto"
-        s.borderBottom = "4px solid transparent"
-        s.scrollBehavior = "smooth"
-        this.element.classList.add("windowResponsive")
-    }
-    addCloseShortcut() {
-        document.onkeyup = ({key, keyCode}) => (keyCode === 27 || key === "Escape") ? this.hide() : false
-    }
-    removeCloseShortcut() {
-        document.onkeyup = null
-    }
-}
+//     setStyle() {
+//         let s = this.element.style
+//         s.height = "80%"
+//         s.minHeight = "500px"
+//         if(this.big){
+//             s.width = "68%"
+//             s.left = "16%"
+//         } else {
+//             s.width = "50%"
+//             s.left = "calc(50% - 25%)"
+//         }
+//         s.top = "calc(50% - 40%)"
+//         s.borderRadius = "4px"
+//         s.borderTop = "3px solid #424953"
+//         s.boxShadow = "0 0 3px 0 rgba(0,0,0,0.5)"
+//         s.position = "absolute"
+//         s.backgroundColor = "#fafafa"
+//         s.zIndex = "1001"
+//         s.overflowY = "auto"
+//         s.borderBottom = "4px solid transparent"
+//         s.scrollBehavior = "smooth"
+//         this.element.classList.add("windowResponsive")
+//     }
+//     addCloseShortcut() {
+//         document.onkeyup = ({key, keyCode}) => (keyCode === 27 || key === "Escape") ? this.hide() : false
+//     }
+//     removeCloseShortcut() {
+//         document.onkeyup = null
+//     }
+// }
 
 class SideNav {
     constructor(element, trigger, options){
@@ -410,9 +410,6 @@ class SideNav {
     }
 }
 
-
-
-//ARREGLAR CARRUSEL
 class VentajasCarousel {
     /**
      * @param {place[]} places 
@@ -520,6 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         window.addEventListener("scroll", function(){
+            console.log("scrolling")
             if(this.scrollY >= headerHeight) {
                 $page.style.paddingTop = "80px"
                 $nav.classList.add("fixed")
@@ -528,39 +526,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 $nav.classList.remove("fixed")
             }
         })
-    }
+    } else {console.log("else xd")}
 
-    const $360 = document.getElementById("360")
-    const $jump360 = document.getElementById("jump360")
-    if($360 && $jump360){
-        let a360Top = $360.getBoundingClientRect().top
+    // const $360 = document.getElementById("360")
+    // const $jump360 = document.getElementById("jump360")
+    // if($360 && $jump360){
+    //     let a360Top = $360.getBoundingClientRect().top
 
-        if(a360Top <= 0){
-            $jump360.style.position = "fixed"
-            $jump360.style.top = "105px"
-        } else {
-            $jump360.style.position = "absolute"
-            $jump360.style.top = "105px"
-        }
-        if(a360Top <= -($360.clientHeight-(105+40))) $jump360.style.display = "none"
-        else $jump360.style.display = "block"
+    //     if(a360Top <= 0){
+    //         $jump360.style.position = "fixed"
+    //         $jump360.style.top = "105px"
+    //     } else {
+    //         $jump360.style.position = "absolute"
+    //         $jump360.style.top = "105px"
+    //     }
+    //     if(a360Top <= -($360.clientHeight-(105+40))) $jump360.style.display = "none"
+    //     else $jump360.style.display = "block"
 
-        window.addEventListener("scroll", () => {
-            let a360Top = $360.getBoundingClientRect().top
-            if(a360Top <= 0){
-                $jump360.style.position = "fixed"
-                $jump360.style.top = "105px"
-            } else {
-                $jump360.style.position = "absolute"
-                $jump360.style.top = "105px"
-            }
-            if(a360Top <= -($360.clientHeight-(240))) $jump360.style.display = "none"
-            else $jump360.style.display = "block"
-        })
+    //     window.addEventListener("scroll", () => {
+    //         let a360Top = $360.getBoundingClientRect().top
+    //         if(a360Top <= 0){
+    //             $jump360.style.position = "fixed"
+    //             $jump360.style.top = "105px"
+    //         } else {
+    //             $jump360.style.position = "absolute"
+    //             $jump360.style.top = "105px"
+    //         }
+    //         if(a360Top <= -($360.clientHeight-(240))) $jump360.style.display = "none"
+    //         else $jump360.style.display = "block"
+    //     })
 
         
-        $jump360.addEventListener("click", () => window.scrollTo(0, (window.scrollY + $360.getBoundingClientRect().top) - $360.clientHeight))
-    }
+    //     $jump360.addEventListener("click", () => window.scrollTo(0, (window.scrollY + $360.getBoundingClientRect().top) - $360.clientHeight))
+    // }
 
     const $fincas_car = document.getElementById("fincas-car")
 
@@ -570,10 +568,10 @@ document.addEventListener('DOMContentLoaded', () => {
             indicators: true
         });
 
-        let fincas_carousel_interval = setInterval(() => fincas_carousel.next(), 4000)
+        // let fincas_carousel_interval = setInterval(() => fincas_carousel.next(), 4000)
 
-        $fincas_car.addEventListener("mouseover", () => clearInterval(fincas_carousel_interval))
-        $fincas_car.addEventListener("mouseleave", () => fincas_carousel_interval = setInterval(() => fincas_carousel.next(), 4000))
+        // $fincas_car.addEventListener("mouseover", () => clearInterval(fincas_carousel_interval))
+        // $fincas_car.addEventListener("mouseleave", () => fincas_carousel_interval = setInterval(() => fincas_carousel.next(), 4000))
     }
 
 
@@ -590,22 +588,22 @@ document.addEventListener('DOMContentLoaded', () => {
         
     }
 
-    let $popup = document.getElementById("popup")
-    let popup = new Popup($popup, {setOverlay: true, big: true})
+    // let $popup = document.getElementById("popup")
+    // let popup = new Popup($popup, {setOverlay: true, big: true})
 
-    setTimeout(() => {
-        let maphashes = document.querySelectorAll("a")
-        maphashes.forEach(a => {
-            a.addEventListener("click", e => {
-                a.hash.replace("#", "")
-                if(a.hash !== "" && a.hash.startsWith("_")) {
-                    e.preventDefault()
-                    let ctop = window.pageYOffset
-                    popup.show(null, {top: `calc(${ctop}px + 90px)`})
-                }
-            })
+    // setTimeout(() => {
+    //     let maphashes = document.querySelectorAll("a")
+    //     maphashes.forEach(a => {
+    //         a.addEventListener("click", e => {
+    //             a.hash.replace("#", "")
+    //             if(a.hash !== "" && a.hash.startsWith("_")) {
+    //                 e.preventDefault()
+    //                 let ctop = window.pageYOffset
+    //                 popup.show(null, {top: `calc(${ctop}px + 90px)`})
+    //             }
+    //         })
             
-        })
-    }, 3000)
+    //     })
+    // }, 3000)
 
 })

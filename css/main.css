@@ -43,18 +43,16 @@ h6 { font-size: 1.5rem; margin: 1rem 0 0.5rem 0 }
 
 body {
     color: #fafafa;
-   position: relative
+    position: relative;
     background-color: gray;
-     overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
-
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
-
 
 html, body {
     height: 100%;
-     overflow-x: hidden !important;
-        width: 100%;
+    overflow-x: hidden !important;
+    width: 100%;
 
 }
 .noclickable {pointer-events: none;}
@@ -82,7 +80,6 @@ a { text-decoration: none;}
     box-shadow: 0 0 3px #008080;
     background-color: #ffffff
 }
-
 
 header {
     width: 100%;
@@ -196,6 +193,37 @@ nav .nav-wrapper ul li a{
 
 nav.fixed {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.sidenav-trigger {
+    position: absolute !important;
+    left: 0px; 
+}
+
+.sidenav--a {
+    font-size: 1rem !important;
+    height: 60px !important;
+    line-height: 60px !important;
+    transition: background-color .25s;
+}
+
+.sidenav > li:first-child {
+    background-color: #424953 !important;
+    height: 80px;
+    box-shadow: 0 0 3px -1px rgba(10, 10, 10, 0.5);
+}
+.sidenav > li:first-child > a {
+    height: 80px;
+    padding: 0 0 0 10px 
+}
+.sidenav > li:first-child > a > i {
+    line-height: 80px !important;
+    font-size: 32px !important;
+    color: #fafafa !important;
+    width: 50px !important;
+    height: 80px !important;
+    text-align: center !important;
+    margin: 0 !important
 }
 
 .page > div {
@@ -409,8 +437,7 @@ nav.fixed {
 }
 
 .map-container {
-    min-height: calc(90vh - 80px);
-    background-color: gray;
+    /* min-height: calc(90vh - 80px); */
     box-shadow: 0 0 3px -1px rgba(0,0,0,0.5);
     max-width: 700px;
     margin: auto;
