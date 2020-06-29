@@ -696,8 +696,12 @@ footer {background-color: #151515;text-align: center;padding-top: 90px;}
 		background-image: url('/images/galeria/5.jpg');
 	}
 
+.bg-stage2.lazyloaded {
+		background-image: url('/images/galeria/11.jpg');
+	}
+
 .bg-stage3.lazyloaded {
-		background-image: url('/images/galeria/9.jpg');
+		background-image: url('/images/galeria/7.jpg');
 	}
 .bg-stage4.lazyloaded {
 		background-image: url('/images/galeria/4.jpg');
