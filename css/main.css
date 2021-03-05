@@ -230,6 +230,8 @@ nav.fixed {
     padding: 80px 0;
 }
 
+
+
 .curly{
     height: 50px;
     width: 200px;
@@ -262,8 +264,8 @@ nav.fixed {
 /* 360 */
 .a360 {
     position: relative;
-    background-color: #a06732;
-    padding: 80px 0 0 0 !important;
+    background-color: #37474f !important;
+    padding: 0  0 !important;
 }
 .jump360 {
     position: absolute;
@@ -423,7 +425,7 @@ nav.fixed {
 
 .carousel.carousel-slider .carousel-item {
 	background-repeat: no-repeat;
-	background-position: bottom;
+	background-position: top;
 	background-size: cover;
 }
 
